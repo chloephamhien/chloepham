@@ -1,25 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <title>Chloe Hien</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#0f172a;
+color:white;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:60px 20px;
+}
+
+h1{
+font-size:48px;
+margin-bottom:10px;
+}
+
+.subtitle{
+color:#94a3b8;
+margin-bottom:40px;
+}
+
+.section{
+margin-top:50px;
+}
+
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+a{
+color:#38bdf8;
+text-decoration:none;
+}
+
+</style>
 </head>
 
 <body>
 
+<div class="container">
+
 <h1>Chloe Hien</h1>
-<p>Finance & Business Analytics Student</p>
+<p class="subtitle">Finance & Business Analytics Student</p>
 
-<h2>About Me</h2>
-<p>Commerce student at the University of Sydney currently on exchange at the National University of Singapore.</p>
+<div class="section">
+<h2>About</h2>
+<p>
+Commerce student at the University of Sydney currently on exchange at the National University of Singapore. 
+Interested in finance, analytics, and business strategy.
+</p>
+</div>
 
+<div class="section">
 <h2>Experience</h2>
-<ul>
-<li>Broker Intern — SSI Securities</li>
-<li>Business Development Team Leader — AIESEC Australia</li>
-</ul>
 
+<div class="card">
+<b>SSI Securities</b><br>
+Broker Intern
+</div>
+
+<div class="card">
+<b>AIESEC Australia</b><br>
+Business Development Team Leader
+</div>
+
+</div>
+
+<div class="section">
 <h2>Contact</h2>
 <p>Email: phamhienchloe@gmail.com</p>
+<p>LinkedIn: add-your-link-here</p>
+</div>
+
+</div>
 
 </body>
 </html>
