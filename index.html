@@ -312,6 +312,12 @@
       display: flex;
       gap: 10px;
       width: max-content;
+      margin: 0 auto;
+    }
+
+    .leadership-gallery.single-image .leadership-track {
+      justify-content: center;
+      width: 100%;
     }
 
     .leadership-img {
@@ -322,6 +328,13 @@
       flex-shrink: 0;
       border: 1px solid #e5e7eb;
       background: #f3f4f6;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .leadership-img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
     }
 
     .leadership-img img {
@@ -338,6 +351,40 @@
     .leadership-gallery::-webkit-scrollbar-thumb {
       background: #d1d5db;
       border-radius: 999px;
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.82);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: min(92vw, 1000px);
+      max-height: 88vh;
+      border-radius: 18px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+      background: #fff;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 24px;
+      right: 28px;
+      font-size: 34px;
+      line-height: 1;
+      color: white;
+      cursor: pointer;
+      font-weight: 400;
     }
 
     @media (max-width: 1024px) {
@@ -537,10 +584,10 @@
 
             <div class="leadership-gallery">
               <div class="leadership-track">
-                <div class="leadership-img"><img src="AIESEC.3.jpg" alt="AIESEC image 1" /></div>
-                <div class="leadership-img"><img src="AIESEC.1.jpg" alt="AIESEC image 2" /></div>
-                <div class="leadership-img"><img src="AIESEC.5.jpg" alt="AIESEC image 3" /></div>
-                <div class="leadership-img"><img src="AIESEC.2.jpg" alt="AIESEC image 4" /></div>
+                <div class="leadership-img"><img src="AIESEC.3.jpg" alt="AIESEC image 1" onclick="openLightbox(this.src)" /></div>
+                <div class="leadership-img"><img src="AIESEC.1.jpg" alt="AIESEC image 2" onclick="openLightbox(this.src)" /></div>
+                <div class="leadership-img"><img src="AIESEC.5.jpg" alt="AIESEC image 3" onclick="openLightbox(this.src)" /></div>
+                <div class="leadership-img"><img src="AIESEC.2.jpg" alt="AIESEC image 4" onclick="openLightbox(this.src)" /></div>
               </div>
             </div>
           </div>
@@ -558,8 +605,8 @@
 
             <div class="leadership-gallery">
               <div class="leadership-track">
-                <div class="leadership-img"><img src="NUSSU.1.jpg" alt="NUSSU image 1" /></div>
-                <div class="leadership-img"><img src="NUSSU.2.jpg" alt="NUSSU image 2" /></div>
+                <div class="leadership-img"><img src="NUSSU.1.jpg" alt="NUSSU image 1" onclick="openLightbox(this.src)" /></div>
+                <div class="leadership-img"><img src="NUSSU.2.jpg" alt="NUSSU image 2" onclick="openLightbox(this.src)" /></div>
               </div>
             </div>
           </div>
@@ -577,8 +624,8 @@
 
             <div class="leadership-gallery">
               <div class="leadership-track">
-                <div class="leadership-img"><img src="NUSICARE.1.jpg" alt="NUSiCare image 1" /></div>
-                <div class="leadership-img"><img src="NUSICARE.2.jpg" alt="NUSiCare image 2" /></div>
+                <div class="leadership-img"><img src="NUSICARE.1.jpg" alt="NUSiCare image 1" onclick="openLightbox(this.src)" /></div>
+                <div class="leadership-img"><img src="NUSICARE.2.jpg" alt="NUSiCare image 2" onclick="openLightbox(this.src)" /></div>
               </div>
             </div>
           </div>
@@ -594,9 +641,9 @@
               </ul>
             </div>
 
-            <div class="leadership-gallery">
+            <div class="leadership-gallery single-image">
               <div class="leadership-track">
-                <div class="leadership-img"><img src="AAYA.1.jpg" alt="AAYA image 1" /></div>
+                <div class="leadership-img"><img src="AAYA.1.jpg" alt="AAYA image 1" onclick="openLightbox(this.src)" /></div>
               </div>
             </div>
           </div>
@@ -604,5 +651,27 @@
       </section>
     </main>
   </div>
+
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="Expanded image" />
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById("lightbox-img").src = src;
+      document.getElementById("lightbox").classList.add("active");
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").classList.remove("active");
+    }
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        closeLightbox();
+      }
+    });
+  </script>
 </body>
 </html>
