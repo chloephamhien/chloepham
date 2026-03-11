@@ -1,677 +1,418 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chloe Pham Portfolio</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f7f8fa;
-      color: #1f2937;
-    }
-
-    .page {
-      max-width: 1320px;
-      margin: 0 auto;
-      padding: 32px 20px;
-      display: grid;
-      grid-template-columns: 300px minmax(0, 1fr);
-      gap: 28px;
-      align-items: start;
-    }
-
-    .sidebar {
-      position: sticky;
-      top: 24px;
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      border-radius: 24px;
-      padding: 24px 20px;
-      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
-      text-align: center;
-    }
-
-    .profile-image-wrap {
-      width: 140px;
-      height: 140px;
-      margin: 0 auto;
-      border-radius: 999px;
-      overflow: hidden;
-      border: 1px solid #e5e7eb;
-      background: #f3f4f6;
-    }
-
-    .profile-image-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .sidebar h1 {
-      margin: 18px 0 8px;
-      font-size: 30px;
-      line-height: 1.15;
-      color: #1d4ed8;
-    }
-
-    .sidebar .role {
-      margin: 0;
-      font-size: 15px;
-      color: #4b5563;
-    }
-
-    .sidebar .summary {
-      margin: 14px auto 0;
-      max-width: 240px;
-      font-size: 13px;
-      line-height: 1.6;
-      color: #6b7280;
-    }
-
-    .sidebar .summary a {
-      color: #1d4ed8;
-      text-decoration: none;
-    }
-
-    .sidebar .summary a:hover {
-      text-decoration: underline;
-    }
-
-    .button-row {
-      margin-top: 18px;
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 10px 14px;
-      border-radius: 14px;
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 600;
-      transition: 0.2s ease;
-      cursor: pointer;
-    }
-
-    .btn-primary {
-      background: #1d4ed8;
-      color: #fff;
-    }
-
-    .btn-primary:hover {
-      opacity: 0.92;
-    }
-
-    .btn-secondary {
-      border: 1px solid #d1d5db;
-      color: #374151;
-      background: #fff;
-    }
-
-    .btn-secondary:hover {
-      background: #f9fafb;
-    }
-
-    .nav-tabs {
-      margin-top: 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      text-align: left;
-    }
-
-    .nav-tabs a {
-      display: block;
-      text-decoration: none;
-      color: #374151;
-      font-size: 13px;
-      font-weight: 600;
-      padding: 10px 12px;
-      border-radius: 12px;
-      background: #f9fafb;
-      border: 1px solid #e5e7eb;
-      transition: 0.2s ease;
-    }
-
-    .nav-tabs a:hover {
-      background: #eff6ff;
-      color: #1d4ed8;
-      border-color: #bfdbfe;
-    }
-
-    .content {
-      min-width: 0;
-    }
-
-    .section-card {
-      background: #fff;
-      border: 1px solid #e5e7eb;
-      border-radius: 24px;
-      padding: 28px;
-      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
-      margin-bottom: 24px;
-    }
-
-    .section-card h2 {
-      margin: 0 0 18px;
-      font-size: 24px;
-      line-height: 1.2;
-      color: #111827;
-      border-bottom: 1px solid #f0f1f3;
-      padding-bottom: 10px;
-    }
-
-    .education p,
-    .education li,
-    .project-description li {
-      font-size: 14px;
-      line-height: 1.7;
-      color: #4b5563;
-    }
-
-    .education p {
-      margin: 0 0 6px;
-    }
-
-    .education ul {
-      margin: 8px 0 0;
-      padding-left: 20px;
-    }
-
-    .project-card {
-      border: 1px solid #e5e7eb;
-      border-radius: 18px;
-      padding: 20px;
-      margin-top: 16px;
-      background: #fff;
-    }
-
-    .project-card:first-child {
-      margin-top: 0;
-    }
-
-    .project-title {
-      margin: 0;
-      font-size: 18px;
-      line-height: 1.4;
-      color: #111827;
-    }
-
-    .project-description {
-      margin: 12px 0 0;
-      padding-left: 18px;
-    }
-
-    .project-description li {
-      margin-bottom: 6px;
-    }
-
-    .project-actions {
-      margin-top: 14px;
-    }
-
-    .leadership-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
-    }
-
-    .leadership-card {
-      border: 1px solid #e5e7eb;
-      border-radius: 22px;
-      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
-      overflow: hidden;
-      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.05);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    .leadership-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 16px 32px rgba(15, 23, 42, 0.12);
-    }
-
-    .leadership-content {
-      padding: 18px 18px 10px;
-    }
-
-    .leadership-label {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      padding: 5px 10px;
-      border-radius: 999px;
-      margin-bottom: 10px;
-    }
-
-    .label-blue {
-      background: #eaf2ff;
-      color: #1d4ed8;
-    }
-
-    .label-purple {
-      background: #f3e8ff;
-      color: #7c3aed;
-    }
-
-    .label-green {
-      background: #dcfce7;
-      color: #15803d;
-    }
-
-    .label-orange {
-      background: #ffedd5;
-      color: #ea580c;
-    }
-
-    .leadership-title {
-      font-size: 18px;
-      margin: 0 0 4px;
-      color: #111827;
-      line-height: 1.35;
-    }
-
-    .leadership-role {
-      font-size: 13px;
-      color: #6b7280;
-      margin-bottom: 10px;
-    }
-
-    .leadership-content ul {
-      padding-left: 18px;
-      margin: 0;
-    }
-
-    .leadership-content li {
-      font-size: 13px;
-      margin-bottom: 5px;
-      line-height: 1.5;
-      color: #4b5563;
-    }
-
-    .leadership-gallery {
-      overflow-x: auto;
-      padding: 10px 16px 16px;
-    }
-
-    .leadership-track {
-      display: flex;
-      gap: 10px;
-      width: max-content;
-      margin: 0 auto;
-    }
-
-    .leadership-gallery.single-image .leadership-track {
-      justify-content: center;
-      width: 100%;
-    }
-
-    .leadership-img {
-      width: 140px;
-      height: 100px;
-      border-radius: 14px;
-      overflow: hidden;
-      flex-shrink: 0;
-      border: 1px solid #e5e7eb;
-      background: #f3f4f6;
-      cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .leadership-img:hover {
-      transform: scale(1.03);
-      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
-    }
-
-    .leadership-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .leadership-gallery::-webkit-scrollbar {
-      height: 6px;
-    }
-
-    .leadership-gallery::-webkit-scrollbar-thumb {
-      background: #d1d5db;
-      border-radius: 999px;
-    }
-
-    .lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(15, 23, 42, 0.82);
-      z-index: 9999;
-      justify-content: center;
-      align-items: center;
-      padding: 24px;
-    }
-
-    .lightbox.active {
-      display: flex;
-    }
-
-    .lightbox img {
-      max-width: min(92vw, 1000px);
-      max-height: 88vh;
-      border-radius: 18px;
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
-      background: #fff;
-    }
-
-    .lightbox-close {
-      position: absolute;
-      top: 24px;
-      right: 28px;
-      font-size: 34px;
-      line-height: 1;
-      color: white;
-      cursor: pointer;
-      font-weight: 400;
-    }
-
-    @media (max-width: 1024px) {
-      .page {
-        grid-template-columns: 1fr;
-      }
-
-      .sidebar {
-        position: relative;
-        top: 0;
-      }
-
-      .nav-tabs {
-        text-align: center;
-      }
-    }
-
-    @media (max-width: 900px) {
-      .leadership-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .page {
-        padding: 18px 12px;
-        gap: 16px;
-      }
-
-      .section-card,
-      .sidebar {
-        padding: 20px 16px;
-        border-radius: 20px;
-      }
-
-      .sidebar h1 {
-        font-size: 26px;
-      }
-
-      .section-card h2 {
-        font-size: 21px;
-      }
-
-      .project-title,
-      .leadership-title {
-        font-size: 17px;
-      }
-
-      .leadership-img {
-        width: 125px;
-        height: 92px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chloe Pham Portfolio</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#f7f8fa;
+color:#111827;
+}
+
+.page{
+max-width:1320px;
+margin:0 auto;
+padding:32px 20px;
+display:grid;
+grid-template-columns:300px 1fr;
+gap:28px;
+}
+
+.sidebar{
+position:sticky;
+top:24px;
+background:white;
+border:1px solid #e5e7eb;
+border-radius:24px;
+padding:24px;
+text-align:center;
+box-shadow:0 6px 18px rgba(0,0,0,0.05);
+}
+
+.profile-image-wrap{
+width:140px;
+height:140px;
+margin:0 auto;
+border-radius:999px;
+overflow:hidden;
+}
+
+.profile-image-wrap img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.sidebar h1{
+margin:16px 0 6px;
+font-size:30px;
+color:#1d4ed8;
+}
+
+.sidebar .role{
+font-size:15px;
+color:#374151;
+}
+
+.sidebar .summary{
+font-size:13px;
+color:#374151;
+}
+
+.button-row{
+margin-top:16px;
+display:flex;
+justify-content:center;
+gap:10px;
+}
+
+.btn{
+padding:8px 14px;
+border-radius:12px;
+font-size:13px;
+text-decoration:none;
+border:1px solid #d1d5db;
+color:#111827;
+background:white;
+}
+
+.btn-primary{
+background:#1d4ed8;
+color:white;
+border:none;
+}
+
+.nav-tabs{
+margin-top:20px;
+display:flex;
+flex-direction:column;
+gap:8px;
+}
+
+.nav-tabs a{
+text-decoration:none;
+font-size:13px;
+padding:10px;
+border-radius:10px;
+border:1px solid #e5e7eb;
+background:#f9fafb;
+color:#111827;
+}
+
+.section-card{
+background:white;
+border:1px solid #e5e7eb;
+border-radius:24px;
+padding:28px;
+margin-bottom:24px;
+box-shadow:0 6px 18px rgba(0,0,0,0.05);
+}
+
+.section-card h2{
+margin-top:0;
+font-size:24px;
+border-bottom:1px solid #f0f1f3;
+padding-bottom:10px;
+}
+
+.project-card{
+border:1px solid #e5e7eb;
+border-radius:18px;
+padding:20px;
+margin-top:18px;
+}
+
+.project-title{
+margin:0;
+font-size:18px;
+}
+
+.project-description{
+padding-left:18px;
+}
+
+.project-description li{
+margin-bottom:6px;
+}
+
+.project-actions{
+margin-top:12px;
+}
+
+/* FILE PREVIEW */
+
+.file-preview{
+margin-top:14px;
+border:1px solid #e5e7eb;
+border-radius:16px;
+overflow:hidden;
+}
+
+.file-preview-header{
+display:flex;
+justify-content:space-between;
+padding:10px 14px;
+border-bottom:1px solid #e5e7eb;
+font-size:12px;
+}
+
+.file-preview iframe{
+width:100%;
+height:200px;
+border:none;
+}
+
+/* LEADERSHIP */
+
+.leadership-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:22px;
+}
+
+.leadership-card{
+border:1px solid #e5e7eb;
+border-radius:22px;
+background:white;
+overflow:hidden;
+}
+
+.leadership-content{
+padding:18px;
+}
+
+.leadership-label{
+font-size:11px;
+font-weight:700;
+padding:4px 10px;
+border-radius:999px;
+display:inline-block;
+margin-bottom:10px;
+}
+
+.label-blue{background:#eaf2ff;color:#1d4ed8;}
+.label-purple{background:#f3e8ff;color:#7c3aed;}
+.label-green{background:#dcfce7;color:#15803d;}
+.label-orange{background:#ffedd5;color:#ea580c;}
+
+.leadership-title{
+margin:0;
+font-size:18px;
+}
+
+.leadership-role{
+font-size:13px;
+color:#374151;
+margin-bottom:8px;
+}
+
+.leadership-gallery{
+padding:14px;
+}
+
+.leadership-track{
+display:flex;
+gap:12px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.leadership-img{
+width:170px;
+height:120px;
+border-radius:14px;
+overflow:hidden;
+cursor:pointer;
+border:1px solid #e5e7eb;
+}
+
+.leadership-img img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* LIGHTBOX */
+
+.lightbox{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.8);
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.lightbox img{
+max-width:90%;
+max-height:85%;
+border-radius:14px;
+}
+
+.lightbox.active{
+display:flex;
+}
+
+</style>
 </head>
+
 <body>
-  <div class="page">
-    <aside class="sidebar">
-      <div class="profile-image-wrap">
-        <img src="Untitled design.png" alt="Chloe Pham" />
-      </div>
 
-      <h1>Chloe Pham</h1>
-      <p class="role">Finance &amp; Business Analytics Student</p>
+<div class="page">
 
-      <p class="summary">
-        Email:
-        <a href="mailto:phamhienchloe@gmail.com">phamhienchloe@gmail.com</a>
-      </p>
+<aside class="sidebar">
 
-      <div class="button-row">
-        <a class="btn btn-secondary" href="https://www.linkedin.com/in/hienphamchloe/" target="_blank">LinkedIn</a>
-        <a class="btn btn-secondary" href="Chloe_Pham_CV.pdf" target="_blank">CV</a>
-      </div>
+<div class="profile-image-wrap">
+<img src="Untitled design.png">
+</div>
 
-      <div class="nav-tabs">
-        <a href="#education">Education</a>
-        <a href="#data-analytics">Data Analytics Projects</a>
-        <a href="#financial-analysis">Financial Analysis Projects</a>
-        <a href="#case-competition">Case Study Competition</a>
-        <a href="#leadership">Leadership Activities</a>
-      </div>
-    </aside>
+<h1>Chloe Pham</h1>
+<p class="role">Finance & Business Analytics Student</p>
 
-    <main class="content">
-      <section class="section-card education" id="education">
-        <h2>Education</h2>
-        <p><strong>Bachelor of Commerce, University of Sydney, Australia</strong></p>
-        <ul>
-          <li>Double Major in Finance &amp; Business Analytics</li>
-          <li>Expected Graduation: December 2027</li>
-          <li>WAM: Distinction</li>
-        </ul>
-      </section>
+<p class="summary">
+Email:
+<a href="mailto:phamhienchloe@gmail.com">phamhienchloe@gmail.com</a>
+</p>
 
-      <section class="section-card" id="data-analytics">
-        <h2>Data Analytics Projects</h2>
+<div class="button-row">
+<a class="btn" href="https://www.linkedin.com/in/hienphamchloe/" target="_blank">LinkedIn</a>
+<a class="btn" href="Chloe_Pham_CV.pdf" target="_blank">CV</a>
+</div>
 
-        <article class="project-card">
-          <h3 class="project-title">Statistical Data Analysis Project – Relationship Satisfaction Study (Australia)</h3>
-          <ul class="project-description">
-            <li>Analysed a national survey dataset of 700 participants to examine drivers of relationship satisfaction in Australia.</li>
-            <li>Used descriptive analysis, hypothesis testing, and regression modelling.</li>
-            <li>Explored variables such as migration status, urban versus rural living, and relationship duration.</li>
-            <li>Generated data-driven insights on key predictors of satisfaction.</li>
-          </ul>
-          <div class="project-actions">
-            <a class="btn btn-primary" href="Data_Analysis.pdf" target="_blank">View Project</a>
-          </div>
-        </article>
-      </section>
+<div class="nav-tabs">
+<a href="#education">Education</a>
+<a href="#data">Data Analytics</a>
+<a href="#finance">Financial Projects</a>
+<a href="#case">Case Competition</a>
+<a href="#leadership">Leadership</a>
+</div>
 
-      <section class="section-card" id="financial-analysis">
-        <h2>Financial Analysis Projects</h2>
+</aside>
 
-        <article class="project-card">
-          <h3 class="project-title">Equity Valuation Analysis</h3>
-          <ul class="project-description">
-            <li>Conducted an equity research analysis of Super Retail Group Ltd. (ASX:SUL).</li>
-            <li>Applied DDM, CAPM, sensitivity analysis, and comparable company multiples.</li>
-            <li>Assessed intrinsic value using publicly available financial data.</li>
-            <li>Developed an investment view supported by valuation findings.</li>
-          </ul>
-          <div class="project-actions">
-            <a class="btn btn-primary" href="Financial_Analysis.pdf" target="_blank">View Project</a>
-          </div>
-        </article>
 
-        <article class="project-card">
-          <h3 class="project-title">Strategic Analysis and Business Model Evaluation</h3>
-          <ul class="project-description">
-            <li>Analysed Fair Trade Jewelry Co. in the sustainable luxury market.</li>
-            <li>Used frameworks including the Strategy Diamond and Business Model analysis.</li>
-            <li>Evaluated value proposition, supply chain, customer segments, and ESG practices.</li>
-            <li>Proposed strategic recommendations for scalable and mission-aligned growth.</li>
-          </ul>
-          <div class="project-actions">
-            <a class="btn btn-primary" href="Consulting_Report.pdf" target="_blank">View Project</a>
-          </div>
-        </article>
-      </section>
+<main class="content">
 
-      <section class="section-card" id="case-competition">
-        <h2>Case Study Competition</h2>
+<section class="section-card" id="education">
+<h2>Education</h2>
+<p><strong>Bachelor of Commerce, University of Sydney</strong></p>
+<ul>
+<li>Double Major in Finance & Business Analytics</li>
+<li>Expected Graduation: December 2027</li>
+<li>WAM: Distinction</li>
+</ul>
+</section>
 
-        <article class="project-card">
-          <h3 class="project-title">Strategic Consulting Analysis for MadeMealCo</h3>
-          <ul class="project-description">
-            <li>Analysed key challenges including customer churn and supply chain costs.</li>
-            <li>Evaluated retention and profitability issues in the meal-kit industry.</li>
-            <li>Developed recommendations including loyalty programs, personalised menus, and supply chain optimisation.</li>
-          </ul>
-          <div class="project-actions">
-            <a class="btn btn-primary" href="MadeMealCo.pdf" target="_blank">View Project</a>
-          </div>
-        </article>
 
-        <article class="project-card">
-          <h3 class="project-title">Integrated Marketing Campaign Strategy</h3>
-          <ul class="project-description">
-            <li>Developed a repositioning strategy for NESCAFÉ Espresso Concentrate targeting Gen Z.</li>
-            <li>Used market trend analysis, customer segmentation, and IMC planning.</li>
-            <li>Proposed digital campaigns, influencer collaborations, and experiential activations.</li>
-          </ul>
-          <div class="project-actions">
-            <a class="btn btn-primary" href="NESTLE.pdf" target="_blank">View Project</a>
-          </div>
-        </article>
+<section class="section-card" id="data">
 
-        <article class="project-card">
-          <h3 class="project-title">Market Strategy Analysis</h3>
-          <ul class="project-description">
-            <li>Evaluated the market adoption potential of InsightED, an AI-powered education platform.</li>
-            <li>Conducted competitor benchmarking and pricing strategy analysis.</li>
-            <li>Identified key segments, adoption barriers, and scale-up opportunities.</li>
-          </ul>
-          <div class="project-actions">
-            <a class="btn btn-primary" href="TEAM 6 - PRESENTATION.pdf" target="_blank">View Project</a>
-          </div>
-        </article>
-      </section>
+<h2>Data Analytics Projects</h2>
 
-      <section class="section-card" id="leadership">
-        <h2>Leadership Activities</h2>
+<article class="project-card">
 
-        <div class="leadership-grid">
-          <div class="leadership-card">
-            <div class="leadership-content">
-              <div class="leadership-label label-blue">Community</div>
-              <h3 class="leadership-title">AIESEC</h3>
-              <div class="leadership-role">Youth Leadership Development</div>
-              <ul>
-                <li>Delivered SDG workshops for primary and secondary students in Sydney.</li>
-                <li>Organised career panels and leadership sessions for university students.</li>
-              </ul>
-            </div>
+<h3 class="project-title">
+Statistical Data Analysis Project – Relationship Satisfaction Study
+</h3>
 
-            <div class="leadership-gallery">
-              <div class="leadership-track">
-                <div class="leadership-img"><img src="AIESEC.3.jpg" alt="AIESEC image 1" onclick="openLightbox(this.src)" /></div>
-                <div class="leadership-img"><img src="AIESEC.1.jpg" alt="AIESEC image 2" onclick="openLightbox(this.src)" /></div>
-                <div class="leadership-img"><img src="AIESEC.5.jpg" alt="AIESEC image 3" onclick="openLightbox(this.src)" /></div>
-                <div class="leadership-img"><img src="AIESEC.2.jpg" alt="AIESEC image 4" onclick="openLightbox(this.src)" /></div>
-              </div>
-            </div>
-          </div>
+<ul class="project-description">
+<li>Analysed a national survey dataset of 700 participants.</li>
+<li>Used descriptive analysis, hypothesis testing, and regression modelling.</li>
+<li>Explored migration status, urban vs rural living, and relationship duration.</li>
+<li>Generated data-driven insights on satisfaction predictors.</li>
+</ul>
 
-          <div class="leadership-card">
-            <div class="leadership-content">
-              <div class="leadership-label label-purple">Student Leadership</div>
-              <h3 class="leadership-title">NUS Student Union</h3>
-              <div class="leadership-role">Public Relations</div>
-              <ul>
-                <li>Led outreach and programme coordination for NUS Open Day.</li>
-                <li>Supported an event attended by 2,000+ prospective students.</li>
-              </ul>
-            </div>
+<div class="project-actions">
+<a class="btn btn-primary" href="Data_Analysis.pdf" target="_blank">
+View Project
+</a>
+</div>
 
-            <div class="leadership-gallery">
-              <div class="leadership-track">
-                <div class="leadership-img"><img src="NUSSU.1.jpg" alt="NUSSU image 1" onclick="openLightbox(this.src)" /></div>
-                <div class="leadership-img"><img src="NUSSU.2.jpg" alt="NUSSU image 2" onclick="openLightbox(this.src)" /></div>
-              </div>
-            </div>
-          </div>
+<div class="file-preview">
+<div class="file-preview-header">
+<span>Project Preview</span>
+<a href="Data_Analysis.pdf" target="_blank">Open full file</a>
+</div>
+<iframe src="Data_Analysis.pdf"></iframe>
+</div>
 
-          <div class="leadership-card">
-            <div class="leadership-content">
-              <div class="leadership-label label-green">Finance</div>
-              <h3 class="leadership-title">NUSiCare</h3>
-              <div class="leadership-role">Finance Manager</div>
-              <ul>
-                <li>Managed fundraising initiatives for international student support.</li>
-                <li>Coordinated sponsorship outreach and event budgets.</li>
-              </ul>
-            </div>
+</article>
 
-            <div class="leadership-gallery">
-              <div class="leadership-track">
-                <div class="leadership-img"><img src="NUSICARE.1.jpg" alt="NUSiCare image 1" onclick="openLightbox(this.src)" /></div>
-                <div class="leadership-img"><img src="NUSICARE.2.jpg" alt="NUSiCare image 2" onclick="openLightbox(this.src)" /></div>
-              </div>
-            </div>
-          </div>
+</section>
 
-          <div class="leadership-card">
-            <div class="leadership-content">
-              <div class="leadership-label label-orange">Industry Engagement</div>
-              <h3 class="leadership-title">Asia-Australia Youth Association</h3>
-              <div class="leadership-role">Careers Associate</div>
-              <ul>
-                <li>Partnered with companies to organise career networking events.</li>
-                <li>Facilitated office visits and internship programmes for students.</li>
-              </ul>
-            </div>
 
-            <div class="leadership-gallery single-image">
-              <div class="leadership-track">
-                <div class="leadership-img"><img src="AAYA.1.jpg" alt="AAYA image 1" onclick="openLightbox(this.src)" /></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-  </div>
+<section class="section-card" id="leadership">
 
-  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <span class="lightbox-close">&times;</span>
-    <img id="lightbox-img" src="" alt="Expanded image" />
-  </div>
+<h2>Leadership Activities</h2>
 
-  <script>
-    function openLightbox(src) {
-      document.getElementById("lightbox-img").src = src;
-      document.getElementById("lightbox").classList.add("active");
-    }
+<div class="leadership-grid">
 
-    function closeLightbox() {
-      document.getElementById("lightbox").classList.remove("active");
-    }
+<div class="leadership-card">
 
-    document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape") {
-        closeLightbox();
-      }
-    });
-  </script>
+<div class="leadership-content">
+<div class="leadership-label label-blue">Community</div>
+<h3 class="leadership-title">AIESEC</h3>
+<div class="leadership-role">Youth Leadership Development</div>
+<ul>
+<li>Delivered SDG workshops in Sydney schools</li>
+<li>Organised leadership and career sessions</li>
+</ul>
+</div>
+
+<div class="leadership-gallery">
+<div class="leadership-track">
+
+<div class="leadership-img">
+<img src="AIESEC.3.jpg" onclick="openLightbox(this.src)">
+</div>
+
+<div class="leadership-img">
+<img src="AIESEC.1.jpg" onclick="openLightbox(this.src)">
+</div>
+
+<div class="leadership-img">
+<img src="AIESEC.5.jpg" onclick="openLightbox(this.src)">
+</div>
+
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+<img id="lightbox-img">
+</div>
+
+
+<script>
+
+function openLightbox(src){
+document.getElementById("lightbox-img").src = src;
+document.getElementById("lightbox").classList.add("active");
+}
+
+function closeLightbox(){
+document.getElementById("lightbox").classList.remove("active");
+}
+
+</script>
+
 </body>
 </html>
