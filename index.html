@@ -306,6 +306,76 @@
         height: 200px;
       }
     }
+    .leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.leadership-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 18px;
+  background: #fff;
+}
+
+.leadership-card .project-title {
+  margin-bottom: 10px;
+  font-size: 17px;
+  line-height: 1.35;
+}
+
+.leadership-card .project-description {
+  margin: 0 0 14px;
+  padding-left: 18px;
+}
+
+.leadership-card .project-description li {
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+
+.leadership-card .gallery-scroll {
+  margin-top: 10px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+.leadership-card .gallery-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+
+.leadership-card .gallery-item {
+  width: 180px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  background: #f3f4f6;
+  flex-shrink: 0;
+  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.04);
+}
+
+.leadership-card .gallery-item img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  display: block;
+}
+
+.leadership-card .gallery-hint {
+  margin: 8px 0 0;
+  font-size: 11px;
+  color: #6b7280;
+}
+
+@media (max-width: 900px) {
+  .leadership-grid {
+    grid-template-columns: 1fr;
+  }
+}
   </style>
 </head>
 <body>
@@ -434,82 +504,83 @@
           </div>
         </article>
       </section>
-
       <section class="section-card" id="leadership">
-        <h2>Leadership Activities</h2>
+  <h2>Leadership Activities</h2>
 
-        <article class="project-card">
-          <h3 class="project-title">AIESEC</h3>
-          <ul class="project-description">
-            <li>Delivered educational sessions to primary and secondary school students in Sydney.</li>
-            <li>Taught topics related to the UN Sustainable Development Goals and global citizenship.</li>
-            <li>Organised career panels and professional development workshops for university students.</li>
-          </ul>
+  <div class="leadership-grid">
+    <article class="leadership-card">
+      <h3 class="project-title">AIESEC</h3>
+      <ul class="project-description">
+        <li>Delivered educational sessions to primary and secondary school students in Sydney.</li>
+        <li>Taught topics related to the United Nations Sustainable Development Goals and global citizenship.</li>
+        <li>Organised career panels and professional development workshops for university students.</li>
+      </ul>
 
-          <div class="gallery-scroll">
-            <div class="gallery-track">
-              <div class="gallery-item"><img src="AIESEC.3.jpg" alt="AIESEC image 1" /></div>
-              <div class="gallery-item"><img src="AIESEC.1.jpg" alt="AIESEC image 2" /></div>
-              <div class="gallery-item"><img src="AIESEC.5.jpg" alt="AIESEC image 3" /></div>
-              <div class="gallery-item"><img src="AIESEC.2.jpg" alt="AIESEC image 4" /></div>
-              <div class="gallery-item"><img src="AIESEC.4.jpg" alt="AIESEC image 5" /></div>
-              <div class="gallery-item"><img src="583904813_2058154521654443_1430909686623591883_n.jpg" alt="AIESEC image 6" /></div>
-              <div class="gallery-item"><img src="583210440_2058154514987777_4047070860218013213_n.jpg" alt="AIESEC image 7" /></div>
-            </div>
-          </div>
-          <p class="gallery-hint">Swipe or scroll horizontally to view more photos.</p>
-        </article>
+      <div class="gallery-scroll">
+        <div class="gallery-track">
+          <div class="gallery-item"><img src="AIESEC.3.jpg" alt="AIESEC image 1" /></div>
+          <div class="gallery-item"><img src="AIESEC.1.jpg" alt="AIESEC image 2" /></div>
+          <div class="gallery-item"><img src="AIESEC.5.jpg" alt="AIESEC image 3" /></div>
+          <div class="gallery-item"><img src="AIESEC.2.jpg" alt="AIESEC image 4" /></div>
+          <div class="gallery-item"><img src="AIESEC.4.jpg" alt="AIESEC image 5" /></div>
+          <div class="gallery-item"><img src="583904813_2058154521654443_1430909686623591883_n.jpg" alt="AIESEC image 6" /></div>
+          <div class="gallery-item"><img src="583210440_2058154514987777_4047070860218013213_n.jpg" alt="AIESEC image 7" /></div>
+        </div>
+      </div>
+      <p class="gallery-hint">Scroll to view more photos.</p>
+    </article>
 
-        <article class="project-card">
-          <h3 class="project-title">National University of Singapore Student Union – Public Relations</h3>
-          <ul class="project-description">
-            <li>Led outreach and public relations initiatives for NUS Open Day.</li>
-            <li>Coordinated event programmes and activities for prospective students.</li>
-            <li>Supported delivery of an event that attracted 2,000+ visitors.</li>
-          </ul>
+    <article class="leadership-card">
+      <h3 class="project-title">National University of Singapore Student Union – Public Relations</h3>
+      <ul class="project-description">
+        <li>Led outreach and public relations initiatives for NUS Open Day.</li>
+        <li>Coordinated event programmes and activities for prospective students.</li>
+        <li>Supported delivery of an event that attracted 2,000+ visitors.</li>
+      </ul>
 
-          <div class="gallery-scroll">
-            <div class="gallery-track">
-              <div class="gallery-item"><img src="NUSSU.1.jpg" alt="NUSSU image 1" /></div>
-              <div class="gallery-item"><img src="NUSSU.2.jpg" alt="NUSSU image 2" /></div>
-            </div>
-          </div>
-          <p class="gallery-hint">Swipe or scroll horizontally to view more photos.</p>
-        </article>
+      <div class="gallery-scroll">
+        <div class="gallery-track">
+          <div class="gallery-item"><img src="NUSSU.1.jpg" alt="NUSSU image 1" /></div>
+          <div class="gallery-item"><img src="NUSSU.2.jpg" alt="NUSSU image 2" /></div>
+        </div>
+      </div>
+      <p class="gallery-hint">Scroll to view more photos.</p>
+    </article>
 
-        <article class="project-card">
-          <h3 class="project-title">NUSiCare – Finance Manager</h3>
-          <ul class="project-description">
-            <li>Organised fundraising events to support international students.</li>
-            <li>Managed sponsor outreach and event budgets.</li>
-            <li>Helped raise funds for student welfare and community support programmes.</li>
-          </ul>
+    <article class="leadership-card">
+      <h3 class="project-title">NUSiCare – Finance Manager</h3>
+      <ul class="project-description">
+        <li>Organised fundraising events to support international students.</li>
+        <li>Managed sponsor outreach and event budgets.</li>
+        <li>Helped raise funds for student welfare and community support programmes.</li>
+      </ul>
 
-          <div class="gallery-scroll">
-            <div class="gallery-track">
-              <div class="gallery-item"><img src="NUSICARE.1.jpg" alt="NUSiCare image 1" /></div>
-              <div class="gallery-item"><img src="NUSICARE.2.jpg" alt="NUSiCare image 2" /></div>
-            </div>
-          </div>
-          <p class="gallery-hint">Swipe or scroll horizontally to view more photos.</p>
-        </article>
+      <div class="gallery-scroll">
+        <div class="gallery-track">
+          <div class="gallery-item"><img src="NUSICARE.1.jpg" alt="NUSiCare image 1" /></div>
+          <div class="gallery-item"><img src="NUSICARE.2.jpg" alt="NUSiCare image 2" /></div>
+        </div>
+      </div>
+      <p class="gallery-hint">Scroll to view more photos.</p>
+    </article>
 
-        <article class="project-card">
-          <h3 class="project-title">Asia-Australia Youth Association – Careers Associate</h3>
-          <ul class="project-description">
-            <li>Conducted outreach with companies and HR/talent teams.</li>
-            <li>Supported networking events, office visits, and internship opportunities for students.</li>
-            <li>Strengthened university–industry engagement through partnership development.</li>
-          </ul>
+    <article class="leadership-card">
+      <h3 class="project-title">Asia-Australia Youth Association – Careers Associate</h3>
+      <ul class="project-description">
+        <li>Conducted outreach with companies and HR/talent teams.</li>
+        <li>Supported networking events, office visits, and internship opportunities for students.</li>
+        <li>Strengthened university–industry engagement through partnership development.</li>
+      </ul>
 
-          <div class="gallery-scroll">
-            <div class="gallery-track">
-              <div class="gallery-item"><img src="AAYA.1.jpg" alt="AAYA image 1" /></div>
-            </div>
-          </div>
-          <p class="gallery-hint">Swipe or scroll horizontally to view more photos.</p>
-        </article>
-      </section>
+      <div class="gallery-scroll">
+        <div class="gallery-track">
+          <div class="gallery-item"><img src="AAYA.1.jpg" alt="AAYA image 1" /></div>
+        </div>
+      </div>
+      <p class="gallery-hint">Scroll to view more photos.</p>
+    </article>
+  </div>
+</section>
     </main>
   </div>
 </body>
