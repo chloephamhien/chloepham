@@ -377,6 +377,98 @@
   }
 }
   </style>
+  .leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.leadership-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.leadership-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.12);
+}
+
+.leadership-content {
+  padding: 18px 18px 10px;
+}
+
+.leadership-label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.label-blue { background:#eaf2ff; color:#1d4ed8; }
+.label-purple { background:#f3e8ff; color:#7c3aed; }
+.label-green { background:#dcfce7; color:#15803d; }
+.label-orange { background:#ffedd5; color:#ea580c; }
+
+.leadership-title {
+  font-size: 18px;
+  margin: 0 0 4px;
+}
+
+.leadership-role {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.leadership-content ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.leadership-content li {
+  font-size: 13px;
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+.leadership-gallery {
+  overflow-x: auto;
+  padding: 10px 16px 16px;
+}
+
+.leadership-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+
+.leadership-img {
+  width: 140px;
+  height: 100px;
+  border-radius: 14px;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 1px solid #e5e7eb;
+}
+
+.leadership-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .leadership-grid {
+    grid-template-columns: 1fr;
+  }
+}
 </head>
 <body>
   <div class="page">
@@ -505,81 +597,95 @@
         </article>
       </section>
       <section class="section-card" id="leadership">
-  <h2>Leadership Activities</h2>
+<h2>Leadership Activities</h2>
 
-  <div class="leadership-grid">
-    <article class="leadership-card">
-      <h3 class="project-title">AIESEC - Business Development Team Leader</h3>
-      <ul class="project-description">
-        <li>Delivered educational sessions to primary and secondary school students in Sydney.</li>
-        <li>Taught topics related to the United Nations Sustainable Development Goals and global citizenship.</li>
-        <li>Organised career panels and professional development workshops for university students.</li>
-      </ul>
+<div class="leadership-grid">
 
-      <div class="gallery-scroll">
-        <div class="gallery-track">
-          <div class="gallery-item"><img src="AIESEC.3.jpg" alt="AIESEC image 1" /></div>
-          <div class="gallery-item"><img src="AIESEC.1.jpg" alt="AIESEC image 2" /></div>
-          <div class="gallery-item"><img src="AIESEC.5.jpg" alt="AIESEC image 3" /></div>
-          <div class="gallery-item"><img src="AIESEC.2.jpg" alt="AIESEC image 4" /></div>
-          <div class="gallery-item"><img src="AIESEC.4.jpg" alt="AIESEC image 5" /></div>
-          <div class="gallery-item"><img src="583904813_2058154521654443_1430909686623591883_n.jpg" alt="AIESEC image 6" /></div>
-          <div class="gallery-item"><img src="583210440_2058154514987777_4047070860218013213_n.jpg" alt="AIESEC image 7" /></div>
-        </div>
-      </div>
-      <p class="gallery-hint">Scroll to view more photos.</p>
-    </article>
+<div class="leadership-card">
+<div class="leadership-content">
+<div class="leadership-label label-blue">Community</div>
+<h3 class="leadership-title">AIESEC</h3>
+<div class="leadership-role">Youth Leadership Development</div>
 
-    <article class="leadership-card">
-      <h3 class="project-title">National University of Singapore Student Union – Public Relations</h3>
-      <ul class="project-description">
-        <li>Led outreach and public relations initiatives for NUS Open Day.</li>
-        <li>Coordinated event programmes and activities for prospective students.</li>
-        <li>Supported delivery of an event that attracted 2,000+ visitors.</li>
-      </ul>
+<ul>
+<li>Delivered SDG workshops for primary and secondary students in Sydney</li>
+<li>Organised career panels and leadership sessions for university students</li>
+</ul>
+</div>
 
-      <div class="gallery-scroll">
-        <div class="gallery-track">
-          <div class="gallery-item"><img src="NUSSU.1.jpg" alt="NUSSU image 1" /></div>
-          <div class="gallery-item"><img src="NUSSU.2.jpg" alt="NUSSU image 2" /></div>
-        </div>
-      </div>
-      <p class="gallery-hint">Scroll to view more photos.</p>
-    </article>
+<div class="leadership-gallery">
+<div class="leadership-track">
+<div class="leadership-img"><img src="AIESEC.3.jpg"></div>
+<div class="leadership-img"><img src="AIESEC.1.jpg"></div>
+<div class="leadership-img"><img src="AIESEC.5.jpg"></div>
+<div class="leadership-img"><img src="AIESEC.2.jpg"></div>
+</div>
+</div>
+</div>
 
-    <article class="leadership-card">
-      <h3 class="project-title">NUSiCare – Finance Manager</h3>
-      <ul class="project-description">
-        <li>Organised fundraising events to support international students.</li>
-        <li>Managed sponsor outreach and event budgets.</li>
-        <li>Helped raise funds for student welfare and community support programmes.</li>
-      </ul>
 
-      <div class="gallery-scroll">
-        <div class="gallery-track">
-          <div class="gallery-item"><img src="NUSICARE.1.jpg" alt="NUSiCare image 1" /></div>
-          <div class="gallery-item"><img src="NUSICARE.2.jpg" alt="NUSiCare image 2" /></div>
-        </div>
-      </div>
-      <p class="gallery-hint">Scroll to view more photos.</p>
-    </article>
+<div class="leadership-card">
+<div class="leadership-content">
+<div class="leadership-label label-purple">Student Leadership</div>
+<h3 class="leadership-title">NUS Student Union</h3>
+<div class="leadership-role">Public Relations</div>
 
-    <article class="leadership-card">
-      <h3 class="project-title">Asia-Australia Youth Association – Careers Associate</h3>
-      <ul class="project-description">
-        <li>Conducted outreach with companies and HR/talent teams.</li>
-        <li>Supported networking events, office visits, and internship opportunities for students.</li>
-        <li>Strengthened university–industry engagement through partnership development.</li>
-      </ul>
+<ul>
+<li>Led outreach and programme coordination for NUS Open Day</li>
+<li>Supported an event attended by 2,000+ prospective students</li>
+</ul>
+</div>
 
-      <div class="gallery-scroll">
-        <div class="gallery-track">
-          <div class="gallery-item"><img src="AAYA.1.jpg" alt="AAYA image 1" /></div>
-        </div>
-      </div>
-      <p class="gallery-hint">Scroll to view more photos.</p>
-    </article>
-  </div>
+<div class="leadership-gallery">
+<div class="leadership-track">
+<div class="leadership-img"><img src="NUSSU.1.jpg"></div>
+<div class="leadership-img"><img src="NUSSU.2.jpg"></div>
+</div>
+</div>
+</div>
+
+
+<div class="leadership-card">
+<div class="leadership-content">
+<div class="leadership-label label-green">Finance</div>
+<h3 class="leadership-title">NUSiCare</h3>
+<div class="leadership-role">Finance Manager</div>
+
+<ul>
+<li>Managed fundraising initiatives for international student support</li>
+<li>Coordinated sponsorship outreach and event budgets</li>
+</ul>
+</div>
+
+<div class="leadership-gallery">
+<div class="leadership-track">
+<div class="leadership-img"><img src="NUSICARE.1.jpg"></div>
+<div class="leadership-img"><img src="NUSICARE.2.jpg"></div>
+</div>
+</div>
+</div>
+
+
+<div class="leadership-card">
+<div class="leadership-content">
+<div class="leadership-label label-orange">Industry Engagement</div>
+<h3 class="leadership-title">Asia-Australia Youth Association</h3>
+<div class="leadership-role">Careers Associate</div>
+
+<ul>
+<li>Partnered with companies to organise career networking events</li>
+<li>Facilitated office visits and internship programmes for students</li>
+</ul>
+</div>
+
+<div class="leadership-gallery">
+<div class="leadership-track">
+<div class="leadership-img"><img src="AAYA.1.jpg"></div>
+</div>
+</div>
+</div>
+
+</div>
 </section>
     </main>
   </div>
