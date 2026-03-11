@@ -1,285 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chloe Hien | CV Showcase</title>
-  <style>
-    * { box-sizing: border-box; }
+<meta charset="UTF-8">
+<title>Chloe Pham Portfolio</title>
 
-    html {
-      scroll-behavior: smooth;
-    }
+<style>
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f3f3f3;
-      color: #222;
-      line-height: 1.65;
-    }
+body{
+font-family: Arial;
+margin:0;
+display:flex;
+background:#f7f7f7;
+}
 
-    .page {
-      max-width: 1120px;
-      margin: 42px auto;
-      padding: 0 24px;
-    }
+/* LEFT PANEL */
 
-    .container {
-      background: #ffffff;
-      display: grid;
-      grid-template-columns: 320px 1fr;
-      gap: 64px;
-      padding: 54px 52px;
-      border-radius: 10px;
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
-    }
+.sidebar{
+width:32%;
+background:white;
+padding:40px;
+text-align:center;
+position:fixed;
+height:100%;
+}
 
-    .sidebar {
-      position: sticky;
-      top: 34px;
-      align-self: start;
-      height: fit-content;
-      text-align: center;
-    }
+.sidebar img{
+width:180px;
+border-radius:50%;
+}
 
-    .name {
-      font-size: 26px;
-      font-weight: 700;
-      color: #2d7fc7;
-      margin-bottom: 22px;
-    }
+.sidebar h1{
+color:#2b6cb0;
+margin-top:20px;
+}
 
-    .profile-wrap {
-      width: 228px;
-      height: 228px;
-      margin: 0 auto 22px;
-      border-radius: 50%;
-      overflow: hidden;
-      background: #dedede;
-    }
+.sidebar p{
+color:#666;
+}
 
-    .profile-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+.sidebar a{
+color:#2b6cb0;
+text-decoration:none;
+}
 
-    .tagline {
-      margin: 0 0 20px;
-      color: #666;
-      font-size: 17px;
-    }
+/* RIGHT CONTENT */
 
-    .sidebar a {
-      color: #2d7fc7;
-      text-decoration: none;
-      font-weight: 700;
-    }
+.content{
+margin-left:32%;
+padding:60px;
+width:68%;
+}
 
-    .sidebar a:hover,
-    .content a:hover {
-      text-decoration: underline;
-    }
+h2{
+margin-top:40px;
+}
 
-    .repo-note {
-      color: #666;
-      font-size: 15px;
-      margin-top: 2px;
-    }
+.project{
+margin-top:25px;
+}
 
-    .maintained {
-      margin-top: 210px;
-      text-align: left;
-      color: #666;
-      font-size: 15px;
-    }
+.project-title{
+font-weight:bold;
+font-size:18px;
+}
 
-    .maintained a {
-      font-weight: 700;
-    }
+.tag{
+font-size:13px;
+color:#666;
+}
 
-    .content h1 {
-      font-size: 34px;
-      line-height: 1.15;
-      margin: 0 0 20px;
-      font-weight: 800;
-    }
+.project img{
+width:100%;
+margin-top:15px;
+border-radius:8px;
+}
 
-    .section {
-      margin-bottom: 30px;
-    }
-
-    .section h2 {
-      font-size: 26px;
-      margin: 0 0 14px;
-      font-weight: 800;
-    }
-
-    .section h3 {
-      font-size: 18px;
-      margin: 0 0 8px;
-      line-height: 1.35;
-      font-weight: 800;
-    }
-
-    .date-inline {
-      font-style: italic;
-      font-weight: 700;
-    }
-
-    .meta {
-      color: #666;
-      font-size: 16px;
-      letter-spacing: 0.02em;
-      margin: 0 0 14px;
-    }
-
-    .content p {
-      margin: 0 0 12px;
-      font-size: 16px;
-      color: #555;
-    }
-
-    .content ul {
-      margin: 8px 0 0 24px;
-      color: #555;
-      font-size: 16px;
-    }
-
-    .content li {
-      margin-bottom: 4px;
-    }
-
-    .content a {
-      color: #2d7fc7;
-      text-decoration: none;
-      font-weight: 700;
-    }
-
-    .project-preview {
-      width: 100%;
-      max-width: 560px;
-      border: 1px solid #ececec;
-      margin-top: 14px;
-      display: block;
-    }
-
-    .divider {
-      height: 1px;
-      background: #efefef;
-      margin: 24px 0;
-    }
-
-    @media (max-width: 920px) {
-      .container {
-        grid-template-columns: 1fr;
-        gap: 28px;
-        padding: 30px 24px;
-      }
-
-      .sidebar {
-        position: static;
-      }
-
-      .maintained {
-        margin-top: 40px;
-        text-align: center;
-      }
-
-      .content h1 {
-        font-size: 28px;
-      }
-    }
-  </style>
+</style>
 </head>
+
 <body>
-  <div class="page">
-    <div class="container">
-      <aside class="sidebar">
-        <div class="name">Chloe Hien</div>
 
-        <div class="profile-wrap">
-          <img src="profile.jpg" alt="Chloe Hien profile photo" />
-        </div>
+<!-- LEFT -->
 
-        <p class="tagline">An enthusiastic aspiring analyst</p>
+<div class="sidebar">
 
-        <p>
-          <a href="https://github.com/chloephamhien/chloepham" target="_blank">View the Project on GitHub</a><br />
-          <span class="repo-note">chloephamhien/chloepham</span>
-        </p>
+<img src="profile.jpg">
 
-        <div class="maintained">
-          <p>This project is maintained by <a href="https://github.com/chloephamhien" target="_blank">chloephamhien</a></p>
-          <p>Hosted on GitHub Pages</p>
-        </div>
-      </aside>
+<h1>Chloe Pham</h1>
 
-      <main class="content">
-        <h1>Entry-level Finance & Data Analyst</h1>
+<p>Finance & Business Analytics Student</p>
 
-        <section class="section">
-          <h2>Education</h2>
-          <h3>Bachelor of Commerce, University of Sydney, Australia</h3>
-          <ul>
-            <li>Majors: Finance and Business Analytics</li>
-            <li>Exchange: National University of Singapore</li>
-            <li>Add your WAM, scholarships, or awards here</li>
-          </ul>
-        </section>
+<p>
+Showcasing academic and extracurricular projects in analytics, strategy, and finance.
+</p>
 
-        <section class="section">
-          <h2>Projects</h2>
-          <h3>
-            Visualising Audience Engagement Across Media Content
-            <span class="date-inline">(May 2025)</span>
-          </h3>
-          <p class="meta">DATA VISUALISATION | TABLEAU</p>
-          <p><a href="#">View Project</a></p>
-          <p>
-            This project explores viewer data across media content to identify engagement trends,
-            highlight high- and low-performing content, and support data-driven recommendations.
-            Replace this paragraph with your own project summary, tools used, and key outcomes.
-          </p>
-          <img class="project-preview" src="project-preview.jpg" alt="Project preview image" />
-        </section>
+<br>
 
-        <section class="section">
-          <h2>Experience</h2>
-          <h3>Your Organisation or Internship</h3>
-          <p class="meta">Role Title | Month Year – Present</p>
-          <ul>
-            <li>Write short bullet points focused on impact and outcomes.</li>
-            <li>Use action verbs like analysed, built, supported, led, or presented.</li>
-            <li>Keep each point to one line if possible so the page looks clean.</li>
-          </ul>
-        </section>
+<a href="https://github.com/yourgithub">View Projects on GitHub</a>
 
-        <section class="section">
-          <h2>Leadership & Activities</h2>
-          <h3>AIESEC / Student Society / Competition</h3>
-          <p class="meta">Position | Year</p>
-          <ul>
-            <li>Add leadership, competitions, or extracurricular highlights here.</li>
-            <li>This section is good for business, consulting, and finance applications.</li>
-          </ul>
-        </section>
+</div>
 
-        <section class="section">
-          <h2>Skills</h2>
-          <p>Excel, PowerPoint, Tableau, SQL, Python, Financial Analysis, Data Visualisation, Presentation Design</p>
-        </section>
+<!-- RIGHT -->
 
-        <section class="section">
-          <h2>Contact</h2>
-          <p>Email: yourname@email.com</p>
-          <p>LinkedIn: linkedin.com/in/yourname</p>
-          <p><a href="resume.pdf" target="_blank">Download Resume</a></p>
-        </section>
-      </main>
-    </div>
-  </div>
+<div class="content">
+
+<h1>Project Portfolio</h1>
+
+<h2>Education</h2>
+
+<p>
+<b>Bachelor of Commerce</b> — University of Sydney
+</p>
+
+<ul>
+<li>Major: Finance</li>
+<li>Minor: Business Analytics</li>
+<li>Exchange: National University of Singapore</li>
+</ul>
+
+
+<h2>Academic & Extracurricular Projects</h2>
+
+
+<div class="project">
+
+<div class="project-title">
+PG&E Wildfire Risk Analysis
+</div>
+
+<div class="tag">
+SUSTAINABILITY RISK | GOVERNANCE
+</div>
+
+<p>
+Evaluated the operational and governance failures that contributed to PG&E’s wildfire risk exposure. Applied stakeholder and sustainability risk management frameworks to assess implications for regulators, investors, and communities.
+</p>
+
+<img src="project1.png">
+
+</div>
+
+
+<div class="project">
+
+<div class="project-title">
+Customer Retention Analytics
+</div>
+
+<div class="tag">
+MARKETING ANALYTICS | DATA ANALYSIS
+</div>
+
+<p>
+Analysed customer retention data using a marketing analytics system to identify behavioural patterns and improve campaign ROI. Conducted both primary and secondary research to generate strategic insights.
+</p>
+
+<img src="project2.png">
+
+</div>
+
+
+<div class="project">
+
+<div class="project-title">
+Domino’s Process Analysis
+</div>
+
+<div class="tag">
+OPERATIONS | PROCESS IMPROVEMENT
+</div>
+
+<p>
+Mapped Domino’s service process and evaluated operational performance using process analysis frameworks. Proposed efficiency improvements to reduce service bottlenecks.
+</p>
+
+<img src="project3.png">
+
+</div>
+
+</div>
+
 </body>
 </html>
