@@ -1,209 +1,212 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Chloe Pham Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chloe Pham Portfolio</title>
 
-<style>
+  <style>
+    *{
+      box-sizing:border-box;
+    }
 
-body{
-font-family: Arial, sans-serif;
-margin:0;
-display:flex;
-background:#f7f7f7;
-}
+    body{
+      margin:0;
+      font-family:Arial, sans-serif;
+      background:#f7f7f7;
+      color:#222;
+    }
 
-/* LEFT PANEL */
+    /* LEFT PANEL */
+    .sidebar{
+      position:fixed;
+      top:0;
+      left:0;
+      width:32%;
+      height:100vh;
+      padding:40px 30px;
+      background:white;
 
-.sidebar{
-width:32%;
-background:white;
-padding:40px;
-position:fixed;
-height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+    }
 
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-}
+    .sidebar img{
+      width:180px;
+      height:180px;
+      object-fit:cover;
+      border-radius:50%;
+      display:block;
+      margin-bottom:20px;
+    }
 
-.sidebar img{
-width:180px;
-height:180px;
-object-fit:cover;
-border-radius:50%;
-}
+    .sidebar h1{
+      margin:0 0 14px;
+      color:#2b6cb0;
+      font-size:32px;
+    }
 
-.sidebar h1{
-color:#2b6cb0;
-margin-top:20px;
-margin-bottom:10px;
-}
+    .sidebar p{
+      margin:0 0 18px;
+      color:#666;
+      line-height:1.5;
+      max-width:320px;
+    }
 
-.sidebar p{
-color:#666;
-max-width:250px;
-line-height:1.5;
-}
+    .sidebar a{
+      color:#2b6cb0;
+      text-decoration:none;
+      font-weight:500;
+    }
 
-.sidebar a{
-color:#2b6cb0;
-text-decoration:none;
-margin-top:10px;
-}
+    /* RIGHT PANEL */
+    .content{
+      margin-left:32%;
+      padding:60px 70px;
+      max-width:900px;
+    }
 
-/* RIGHT CONTENT */
+    h1{
+      font-size:52px;
+      margin-top:0;
+      margin-bottom:36px;
+    }
 
-.content{
-margin-left:32%;
-padding:60px;
-max-width:800px;
-}
+    h2{
+      font-size:24px;
+      margin-top:40px;
+      margin-bottom:16px;
+    }
 
-/* TEXT */
+    p, li{
+      font-size:18px;
+      line-height:1.65;
+    }
 
-h1{
-margin-top:0;
-}
+    ul{
+      margin-top:10px;
+      padding-left:24px;
+    }
 
-h2{
-margin-top:40px;
-}
+    .project{
+      margin-top:34px;
+    }
 
-/* PROJECTS */
+    .project-title{
+      font-size:30px;
+      font-weight:700;
+      margin-bottom:6px;
+    }
 
-.project{
-margin-top:30px;
-}
+    .tag{
+      font-size:14px;
+      color:#777;
+      letter-spacing:0.5px;
+      margin-bottom:14px;
+      text-transform:uppercase;
+    }
 
-.project-title{
-font-weight:bold;
-font-size:18px;
-}
+    .project p{
+      max-width:760px;
+      margin-top:0;
+    }
 
-.tag{
-font-size:13px;
-color:#777;
-margin-top:4px;
-}
+    .project img{
+      width:100%;
+      max-width:760px;
+      height:auto;
+      border-radius:10px;
+      margin-top:16px;
+      display:block;
+    }
 
-.project p{
-line-height:1.6;
-max-width:700px;
-}
+    /* MOBILE */
+    @media (max-width: 900px){
+      .sidebar{
+        position:relative;
+        width:100%;
+        height:auto;
+      }
 
-.project img{
-width:100%;
-margin-top:15px;
-border-radius:8px;
-}
+      .content{
+        margin-left:0;
+        padding:40px 24px;
+      }
 
-</style>
+      h1{
+        font-size:38px;
+      }
+
+      .project-title{
+        font-size:24px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<!-- LEFT -->
+  <div class="sidebar">
+    <img src="Untitled design.png" alt="Chloe Pham" />
+    <h1>Chloe Pham</h1>
+    <p>Finance &amp; Business Analytics Student</p>
+    <p>
+      Showcasing academic and extracurricular projects in analytics,
+      strategy, and finance.
+    </p>
+    <a href="https://github.com/yourgithub" target="_blank">View Projects on GitHub</a>
+  </div>
 
-<div class="sidebar">
+  <div class="content">
+    <h1>Project Portfolio</h1>
 
-<img src="Untitled design.png">
+    <h2>Education</h2>
+    <p><b>Bachelor of Commerce</b> — University of Sydney</p>
 
-<h1>Chloe Pham</h1>
+    <ul>
+      <li>Major: Finance</li>
+      <li>Minor: Business Analytics</li>
+      <li>Exchange: National University of Singapore</li>
+    </ul>
 
-<p>Finance & Business Analytics Student</p>
+    <h2>Academic &amp; Extracurricular Projects</h2>
 
-<p>
-Showcasing academic and extracurricular projects in analytics, strategy, and finance.
-</p>
+    <div class="project">
+      <div class="project-title">PG&amp;E Wildfire Risk Analysis</div>
+      <div class="tag">Sustainability Risk | Governance</div>
+      <p>
+        Evaluated the operational and governance failures that contributed to
+        PG&amp;E’s wildfire risk exposure. Applied stakeholder and sustainability
+        risk management frameworks to assess implications for regulators,
+        investors, and communities.
+      </p>
+      <img src="project1.png" alt="PG&E Wildfire Risk Analysis" />
+    </div>
 
-<br>
+    <div class="project">
+      <div class="project-title">Customer Retention Analytics</div>
+      <div class="tag">Marketing Analytics | Data Analysis</div>
+      <p>
+        Analysed customer retention data using a marketing analytics system to
+        identify behavioural patterns and improve campaign ROI. Conducted both
+        primary and secondary research to generate strategic insights.
+      </p>
+      <img src="project2.png" alt="Customer Retention Analytics" />
+    </div>
 
-<a href="https://github.com/yourgithub">View Projects on GitHub</a>
-
-</div>
-
-<!-- RIGHT -->
-
-<div class="content">
-
-<h1>Project Portfolio</h1>
-
-<h2>Education</h2>
-
-<p>
-<b>Bachelor of Commerce</b> — University of Sydney
-</p>
-
-<ul>
-<li>Major: Finance</li>
-<li>Minor: Business Analytics</li>
-<li>Exchange: National University of Singapore</li>
-</ul>
-
-
-<h2>Academic & Extracurricular Projects</h2>
-
-
-<div class="project">
-
-<div class="project-title">
-PG&E Wildfire Risk Analysis
-</div>
-
-<div class="tag">
-SUSTAINABILITY RISK | GOVERNANCE
-</div>
-
-<p>
-Evaluated the operational and governance failures that contributed to PG&E’s wildfire risk exposure. Applied stakeholder and sustainability risk management frameworks to assess implications for regulators, investors, and communities.
-</p>
-
-<img src="project1.png">
-
-</div>
-
-
-<div class="project">
-
-<div class="project-title">
-Customer Retention Analytics
-</div>
-
-<div class="tag">
-MARKETING ANALYTICS | DATA ANALYSIS
-</div>
-
-<p>
-Analysed customer retention data using a marketing analytics system to identify behavioural patterns and improve campaign ROI. Conducted both primary and secondary research to generate strategic insights.
-</p>
-
-<img src="project2.png">
-
-</div>
-
-
-<div class="project">
-
-<div class="project-title">
-Domino’s Process Analysis
-</div>
-
-<div class="tag">
-OPERATIONS | PROCESS IMPROVEMENT
-</div>
-
-<p>
-Mapped Domino’s service process and evaluated operational performance using process analysis frameworks. Proposed efficiency improvements to reduce service bottlenecks.
-</p>
-
-<img src="project3.png">
-
-</div>
-
-</div>
+    <div class="project">
+      <div class="project-title">Domino’s Process Analysis</div>
+      <div class="tag">Operations | Process Improvement</div>
+      <p>
+        Mapped Domino’s service process and evaluated operational performance
+        using process analysis frameworks. Proposed efficiency improvements to
+        reduce service bottlenecks.
+      </p>
+      <img src="project3.png" alt="Domino’s Process Analysis" />
+    </div>
+  </div>
 
 </body>
 </html>
