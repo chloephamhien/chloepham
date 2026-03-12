@@ -17,7 +17,7 @@
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background: #f7f8fa;
-      color: #111827;
+      color: #1f2937;
     }
 
     .page {
@@ -68,7 +68,7 @@
     .sidebar .role {
       margin: 0;
       font-size: 18px;
-      color: #374151;
+      color: #4b5563;
     }
 
     .sidebar .summary {
@@ -76,7 +76,7 @@
       max-width: 250px;
       font-size: 14px;
       line-height: 1.7;
-      color: #111827;
+      color: #6b7280;
     }
 
     .sidebar .summary a {
@@ -104,13 +104,11 @@
       font-size: 14px;
       font-weight: 600;
       transition: 0.2s ease;
-      cursor: pointer;
     }
 
     .btn-primary {
       background: #1d4ed8;
       color: #fff;
-      border: none;
     }
 
     .btn-primary:hover {
@@ -145,15 +143,14 @@
       font-size: 34px;
       line-height: 1.15;
       color: #111827;
-      border-bottom: 1px solid #f0f1f3;
-      padding-bottom: 12px;
     }
 
     .education p,
-    .education li {
+    .education li,
+    .project-description {
       font-size: 16px;
       line-height: 1.8;
-      color: #111827;
+      color: #4b5563;
     }
 
     .education p {
@@ -170,7 +167,6 @@
       border-radius: 22px;
       padding: 24px;
       margin-top: 18px;
-      background: #fff;
     }
 
     .project-card:first-child {
@@ -186,33 +182,18 @@
 
     .project-description {
       margin: 16px 0 0;
-      padding-left: 22px;
-    }
-
-    .project-description li {
-      font-size: 16px;
-      line-height: 1.8;
-      color: #111827;
-      margin-bottom: 6px;
-    }
-
-    .project-actions {
-      margin-top: 16px;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
     }
 
     .file-viewer {
-      margin-top: 18px;
+      margin-top: 20px;
       border: 1px solid #e5e7eb;
-      border-radius: 18px;
+      border-radius: 20px;
       overflow: hidden;
       background: #f9fafb;
     }
 
     .file-viewer-header {
-      padding: 10px 14px;
+      padding: 12px 16px;
       border-bottom: 1px solid #e5e7eb;
       display: flex;
       align-items: center;
@@ -222,15 +203,15 @@
     }
 
     .file-viewer-header span {
-      font-size: 12px;
-      color: #374151;
+      font-size: 14px;
+      color: #6b7280;
       font-weight: 600;
     }
 
     .file-viewer-header a {
       color: #1d4ed8;
       text-decoration: none;
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 600;
     }
 
@@ -240,160 +221,45 @@
 
     .file-viewer iframe {
       width: 100%;
-      height: 220px;
+      height: 560px;
       border: none;
       display: block;
       background: #fff;
     }
 
-    .leadership-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
+    .gallery-scroll {
+      margin-top: 20px;
+      overflow-x: auto;
+      padding-bottom: 8px;
     }
 
-    .leadership-card {
-      border: 1px solid #e5e7eb;
-      border-radius: 22px;
-      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
-      overflow: hidden;
-      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .leadership-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 24px rgba(15, 23, 42, 0.10);
-    }
-
-    .leadership-content {
-      padding: 22px 22px 14px;
-    }
-
-    .leadership-label {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      padding: 6px 12px;
-      border-radius: 999px;
-      margin-bottom: 14px;
-      letter-spacing: 0.02em;
-    }
-
-    .label-blue {
-      background: #eaf2ff;
-      color: #1d4ed8;
-    }
-
-    .label-purple {
-      background: #f3e8ff;
-      color: #7c3aed;
-    }
-
-    .label-green {
-      background: #dcfce7;
-      color: #15803d;
-    }
-
-    .label-orange {
-      background: #ffedd5;
-      color: #ea580c;
-    }
-
-    .leadership-title {
-      margin: 0 0 6px;
-      font-size: 26px;
-      line-height: 1.2;
-      color: #111827;
-    }
-
-    .leadership-role {
-      margin: 0 0 14px;
-      font-size: 14px;
-      color: #374151;
-    }
-
-    .leadership-description {
-      margin: 0;
-      padding-left: 22px;
-    }
-
-    .leadership-description li {
-      font-size: 15px;
-      line-height: 1.7;
-      color: #111827;
-      margin-bottom: 8px;
-    }
-
-    .leadership-gallery {
-      padding: 0 22px 22px;
-    }
-
-    .leadership-track {
+    .gallery-track {
       display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-      width: 100%;
+      gap: 16px;
+      width: max-content;
     }
 
-    .leadership-img {
-      width: 170px;
-      height: 120px;
-      border-radius: 16px;
+    .gallery-item {
+      width: 340px;
+      border-radius: 20px;
       overflow: hidden;
       border: 1px solid #e5e7eb;
       background: #f3f4f6;
-      cursor: pointer;
       flex-shrink: 0;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
     }
 
-    .leadership-img:hover {
-      transform: scale(1.03);
-      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
-    }
-
-    .leadership-img img {
+    .gallery-item img {
       width: 100%;
-      height: 100%;
+      height: 270px;
       object-fit: cover;
       display: block;
     }
 
-    .lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(15, 23, 42, 0.82);
-      z-index: 9999;
-      justify-content: center;
-      align-items: center;
-      padding: 24px;
-    }
-
-    .lightbox.active {
-      display: flex;
-    }
-
-    .lightbox img {
-      max-width: min(92vw, 1000px);
-      max-height: 88vh;
-      border-radius: 18px;
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
-      background: #fff;
-    }
-
-    .lightbox-close {
-      position: absolute;
-      top: 24px;
-      right: 28px;
-      font-size: 34px;
-      line-height: 1;
-      color: white;
-      cursor: pointer;
-      font-weight: 400;
+    .gallery-hint {
+      margin: 12px 0 0;
+      font-size: 13px;
+      color: #6b7280;
     }
 
     @media (max-width: 1024px) {
@@ -404,12 +270,6 @@
       .sidebar {
         position: relative;
         top: 0;
-      }
-    }
-
-    @media (max-width: 900px) {
-      .leadership-grid {
-        grid-template-columns: 1fr;
       }
     }
 
@@ -438,16 +298,15 @@
       }
 
       .file-viewer iframe {
-        height: 180px;
+        height: 420px;
       }
 
-      .leadership-title {
-        font-size: 22px;
+      .gallery-item {
+        width: 280px;
       }
 
-      .leadership-img {
-        width: 145px;
-        height: 105px;
+      .gallery-item img {
+        height: 220px;
       }
     }
   </style>
@@ -458,112 +317,129 @@
       <div class="profile-image-wrap">
         <img src="Untitled design.png" alt="Chloe Pham" />
       </div>
+
       <h1>Chloe Pham</h1>
       <p class="role">Finance &amp; Business Analytics Student</p>
+
       <p class="summary">
         Email:
         <a href="mailto:phamhienchloe@gmail.com">phamhienchloe@gmail.com</a>
       </p>
+      
       <div class="button-row">
         <a class="btn btn-secondary" href="https://www.linkedin.com/in/hienphamchloe/" target="_blank">LinkedIn</a>
         <a class="btn btn-secondary" href="Chloe_Pham_CV.pdf" target="_blank">CV</a>
       </div>
     </aside>
-
     <main class="content">
       <section class="section-card education">
         <h2>Education</h2>
         <p><strong>Bachelor of Commerce, University of Sydney, Australia</strong></p>
         <ul>
           <li>Majors: Finance &amp; Business Analytics (Double Majors)</li>
-          <li>Graduation Date: December 2027</li>
+          <li>Graduation Date: December 2027 </li>
           <li>WAM: Distinction</li>
         </ul>
       </section>
 
-     <section class="section-card" id="data-analytics">
+      <section class="section-card">
         <h2>Data Analytics Projects</h2>
 
         <article class="project-card">
           <h3 class="project-title">Statistical Data Analysis Project – Relationship Satisfaction Study (Australia)</h3>
-          <ul class="project-description">
-            <li>Analysed a national survey dataset of 700 participants to examine drivers of relationship satisfaction in Australia.</li>
-            <li>Used descriptive analysis, hypothesis testing, and regression modelling.</li>
-            <li>Explored variables such as migration status, urban versus rural living, and relationship duration.</li>
-            <li>Generated data-driven insights on key predictors of satisfaction.</li>
-          </ul>
-          <div class="project-actions">
-            <a class="btn btn-primary" href="Data_Analysis.pdf" target="_blank">View Project</a>
+          <p class="project-description">
+            This project analysed a national survey dataset (n=700) to investigate determinants of relationship satisfaction in Australia. Using statistical tools such as descriptive analysis, hypothesis testing, and regression modelling, the study explored how demographic and lifestyle variables (e.g., migration status, urban vs rural living, and relationship duration) relate to satisfaction. The aim was to identify key predictors of relationship satisfaction and provide data-driven insights.
+          </p>
+
+          <div class="file-viewer">
+            <div class="file-viewer-header">
+              <span>Scrollable project file</span>
+              <a href="Data_Analysis.pdf" target="_blank">Open file</a>
+            </div>
+            <iframe src="Data_Analysis.pdf"></iframe>
           </div>
         </article>
       </section>
 
-      <section class="section-card" id="financial-analysis">
-        <h2>Financial Analysis Projects</h2>
+      <section class="section-card">
+        <h2>Financial Projects</h2>
 
         <article class="project-card">
           <h3 class="project-title">Equity Valuation Analysis</h3>
-          <ul class="project-description">
-            <li>Conducted an equity research analysis of Super Retail Group Ltd. (ASX:SUL).</li>
-            <li>Applied DDM, CAPM, sensitivity analysis, and comparable company multiples.</li>
-            <li>Assessed intrinsic value using publicly available financial data.</li>
-            <li>Developed an investment view supported by valuation findings.</li>
-          </ul>
-          <div class="project-actions">
-            <a class="btn btn-primary" href="Financial_Analysis.pdf" target="_blank">View Project</a>
+          <p class="project-description">
+            This project involved conducting an equity research analysis of Super Retail Group Ltd. (ASX:SUL), an Australian retail company operating brands such as Supercheap Auto, Rebel, BCF, and Macpac. Using financial valuation tools including the Dividend Discount Model (DDM), Capital Asset Pricing Model (CAPM), sensitivity analysis, and comparable company multiples, the analysis evaluated the company’s intrinsic value based on publicly available financial data. The project aimed to assess the firm’s valuation and investment attractiveness and provide a data-supported investment recommendation for the stock.
+          </p>
+
+          <div class="file-viewer">
+            <div class="file-viewer-header">
+              <span>Scrollable project file</span>
+              <a href="Financial_Analysis.pdf" target="_blank">Open file</a>
+            </div>
+            <iframe src="Financial_Analysis.pdf"></iframe>
           </div>
         </article>
 
         <article class="project-card">
           <h3 class="project-title">Strategic Analysis and Business Model Evaluation</h3>
-          <ul class="project-description">
-            <li>Analysed Fair Trade Jewelry Co. in the sustainable luxury market.</li>
-            <li>Used frameworks including the Strategy Diamond and Business Model analysis.</li>
-            <li>Evaluated value proposition, supply chain, customer segments, and ESG practices.</li>
-            <li>Proposed strategic recommendations for scalable and mission-aligned growth.</li>
-          </ul>
-          <div class="project-actions">
-            <a class="btn btn-primary" href="Consulting_Report.pdf" target="_blank">View Project</a>
+          <p class="project-description">
+            This project analysed the business strategy of Fair Trade Jewelry Co. to evaluate its competitive positioning and growth opportunities in the sustainable luxury market. Using strategic frameworks including the Strategy Diamond and Business Models, the analysis examined the firm’s value proposition, supply chain, customer segments, and ESG practices. The project aimed to assess how sustainability, innovation, and ethical sourcing contribute to the company’s competitive advantage and to develop strategic recommendations to support scalable growth while maintaining its social and environmental mission.
+          </p>
+
+          <div class="file-viewer">
+            <div class="file-viewer-header">
+              <span>Scrollable project file</span>
+              <a href="Consulting_Report.pdf" target="_blank">Open file</a>
+            </div>
+            <iframe src="Consulting_Report.pdf"></iframe>
           </div>
         </article>
       </section>
 
-      <section class="section-card" id="case-competition">
+      <section class="section-card">
         <h2>Case Study Competition</h2>
 
         <article class="project-card">
           <h3 class="project-title">Strategic Consulting Analysis for MadeMealCo</h3>
-          <ul class="project-description">
-            <li>Analysed key challenges including customer churn and supply chain costs.</li>
-            <li>Evaluated retention and profitability issues in the meal-kit industry.</li>
-            <li>Developed recommendations including loyalty programs, personalised menus, and supply chain optimisation.</li>
-          </ul>
-          <div class="project-actions">
-            <a class="btn btn-primary" href="MadeMealCo.pdf" target="_blank">View Project</a>
+          <p class="project-description">
+            This project analysed the strategic challenges faced by MadeMealCo, focusing on high customer churn and supply chain costs in the meal-kit industry. Using market analysis and operational cost evaluation, the project proposed strategies such as loyalty programs, personalised menus, and supply chain optimisation to improve customer retention and profitability.
+          </p>
+
+          <div class="file-viewer">
+            <div class="file-viewer-header">
+              <span>Scrollable project file</span>
+              <a href="MadeMealCo.pdf" target="_blank">Open file</a>
+            </div>
+            <iframe src="MadeMealCo.pdf"></iframe>
           </div>
         </article>
 
         <article class="project-card">
           <h3 class="project-title">Integrated Marketing Campaign Strategy</h3>
-          <ul class="project-description">
-            <li>Developed a repositioning strategy for NESCAFÉ Espresso Concentrate targeting Gen Z.</li>
-            <li>Used market trend analysis, customer segmentation, and IMC planning.</li>
-            <li>Proposed digital campaigns, influencer collaborations, and experiential activations.</li>
-          </ul>
-          <div class="project-actions">
-            <a class="btn btn-primary" href="NESTLE.pdf" target="_blank">View Project</a>
+          <p class="project-description">
+            This project developed an integrated marketing strategy for NESCAFÉ Espresso Concentrate to reposition the brand among Gen Z consumers. Using market trend analysis, customer segmentation, and IMC planning, the project proposed digital campaigns, influencer collaborations, and experiential activations to embed the product into Gen Z’s productivity and social rituals.
+          </p>
+
+          <div class="file-viewer">
+            <div class="file-viewer-header">
+              <span>Scrollable project file</span>
+              <a href="NESTLE.pdf" target="_blank">Open file</a>
+            </div>
+            <iframe src="NESTLE.pdf"></iframe>
           </div>
         </article>
 
         <article class="project-card">
           <h3 class="project-title">Market Strategy Analysis</h3>
-          <ul class="project-description">
-            <li>Evaluated the market adoption potential of InsightED, an AI-powered education platform.</li>
-            <li>Conducted competitor benchmarking and pricing strategy analysis.</li>
-            <li>Identified key segments, adoption barriers, and scale-up opportunities.</li>
-          </ul>
-          <div class="project-actions">
-            <a class="btn btn-primary" href="TEAM 6 - PRESENTATION.pdf" target="_blank">View Project</a>
+          <p class="project-description">
+            This project analysed the market adoption potential of InsightED, an AI-powered educational platform designed to support teachers working with neurodiverse learners. Using market analysis, competitor benchmarking, and pricing strategy evaluation, the project identified key market segments, adoption barriers, and pricing models to support large-scale implementation across schools and early childhood education centres.
+          </p>
+
+          <div class="file-viewer">
+            <div class="file-viewer-header">
+              <span>Scrollable project file</span>
+              <a href="TEAM 6 - PRESENTATION.pdf" target="_blank">Open file</a>
+            </div>
+            <iframe src="TEAM 6 - PRESENTATION.pdf"></iframe>
           </div>
         </article>
       </section>
@@ -571,112 +447,71 @@
       <section class="section-card">
         <h2>Leadership Activities</h2>
 
-        <div class="leadership-grid">
-          <article class="leadership-card">
-            <div class="leadership-content">
-              <div class="leadership-label label-blue">Community</div>
-              <h3 class="leadership-title">AIESEC</h3>
-              <p class="leadership-role">Youth Leadership Development</p>
-              <ul class="leadership-description">
-                <li>Delivered educational sessions to primary and secondary school students in Sydney.</li>
-                <li>Taught the United Nations Sustainable Development Goals and global citizenship principles.</li>
-                <li>Organised career panels and professional development workshops for university students.</li>
-              </ul>
-            </div>
-            <div class="leadership-gallery">
-              <div class="leadership-track">
-                <div class="leadership-img"><img src="AIESEC.3.jpg" alt="AIESEC image 1" onclick="openLightbox(this.src)" /></div>
-                <div class="leadership-img"><img src="AIESEC.1.jpg" alt="AIESEC image 2" onclick="openLightbox(this.src)" /></div>
-                <div class="leadership-img"><img src="AIESEC.5.jpg" alt="AIESEC image 3" onclick="openLightbox(this.src)" /></div>
-                <div class="leadership-img"><img src="AIESEC.2.jpg" alt="AIESEC image 4" onclick="openLightbox(this.src)" /></div>
-                <div class="leadership-img"><img src="AIESEC.4.jpg" alt="AIESEC image 5" onclick="openLightbox(this.src)" /></div>
-                <div class="leadership-img"><img src="583904813_2058154521654443_1430909686623591883_n.jpg" alt="AIESEC image 6" onclick="openLightbox(this.src)" /></div>
-                <div class="leadership-img"><img src="583210440_2058154514987777_4047070860218013213_n.jpg" alt="AIESEC image 7" onclick="openLightbox(this.src)" /></div>
-              </div>
-            </div>
-          </article>
+        <article class="project-card">
+          <h3 class="project-title">AIESEC</h3>
+          <p class="project-description">
+            Delivering educational sessions to primary and secondary school students in Sydney on the United Nations Sustainable Development Goals (SDGs) and global citizenship principles. Also organised career panels and professional development workshops for university students to connect them with industry insights and leadership opportunities.
+          </p>
 
-          <article class="leadership-card">
-            <div class="leadership-content">
-              <div class="leadership-label label-purple">Student Leadership</div>
-              <h3 class="leadership-title">National University of Singapore Student Union</h3>
-              <p class="leadership-role">Public Relations</p>
-              <ul class="leadership-description">
-                <li>Led outreach and public relations initiatives for NUS Open Day.</li>
-                <li>Organised programmes and activities for prospective students.</li>
-                <li>Managed stakeholder outreach and coordinated event programming.</li>
-                <li>Supported an event that attracted 2,000+ visitors.</li>
-              </ul>
+          <div class="gallery-scroll">
+            <div class="gallery-track">
+              <div class="gallery-item"><img src="AIESEC.3.jpg" alt="AIESEC image 1" /></div>
+              <div class="gallery-item"><img src="AIESEC.1.jpg" alt="AIESEC image 2" /></div>
+              <div class="gallery-item"><img src="AIESEC.5.jpg" alt="AIESEC image 3" /></div>
+              <div class="gallery-item"><img src="AIESEC.2.jpg" alt="AIESEC image 4" /></div>
+              <div class="gallery-item"><img src="AIESEC.4.jpg" alt="AIESEC image 5" /></div>
+              <div class="gallery-item"><img src="583904813_2058154521654443_1430909686623591883_n.jpg" alt="AIESEC image 6" /></div>
+              <div class="gallery-item"><img src="583210440_2058154514987777_4047070860218013213_n.jpg" alt="AIESEC image 7" /></div>
             </div>
-            <div class="leadership-gallery">
-              <div class="leadership-track">
-                <div class="leadership-img"><img src="NUSSU.1.jpg" alt="NUSSU image 1" onclick="openLightbox(this.src)" /></div>
-                <div class="leadership-img"><img src="NUSSU.2.jpg" alt="NUSSU image 2" onclick="openLightbox(this.src)" /></div>
-              </div>
-            </div>
-          </article>
+          </div>
+          <p class="gallery-hint">Swipe or scroll horizontally to view more photos.</p>
+        </article>
 
-          <article class="leadership-card">
-            <div class="leadership-content">
-              <div class="leadership-label label-green">Finance</div>
-              <h3 class="leadership-title">NUSiCare</h3>
-              <p class="leadership-role">Finance Manager</p>
-              <ul class="leadership-description">
-                <li>Organised fundraising events and secured sponsorships to support international students.</li>
-                <li>Managed event budgets and coordinated sponsor outreach.</li>
-                <li>Helped raise funds for student welfare and community support programmes.</li>
-              </ul>
-            </div>
-            <div class="leadership-gallery">
-              <div class="leadership-track">
-                <div class="leadership-img"><img src="NUSICARE.1.jpg" alt="NUSiCare image 1" onclick="openLightbox(this.src)" /></div>
-                <div class="leadership-img"><img src="NUSICARE.2.jpg" alt="NUSiCare image 2" onclick="openLightbox(this.src)" /></div>
-              </div>
-            </div>
-          </article>
+        <article class="project-card">
+          <h3 class="project-title">National University of Singapore Student Union - Public Relations</h3>
+          <p class="project-description">
+            Led outreach and public relations initiatives for the NUS Open Day, collaborating with the National University of Singapore to organise programmes and activities for prospective students. Managed stakeholder outreach, coordinated event programming, and supported the execution of an open day event that attracted 2,000+ visitors to the university.
+          </p>
 
-          <article class="leadership-card">
-            <div class="leadership-content">
-              <div class="leadership-label label-orange">Industry Engagement</div>
-              <h3 class="leadership-title">Asia-Australia Youth Association</h3>
-              <p class="leadership-role">Careers Associate</p>
-              <ul class="leadership-description">
-                <li>Conducted outreach with companies and HR/talent acquisition teams.</li>
-                <li>Coordinated industry networking events, company office visits, and internship programmes.</li>
-                <li>Connected students with employers and strengthened university–industry engagement.</li>
-              </ul>
+          <div class="gallery-scroll">
+            <div class="gallery-track">
+              <div class="gallery-item"><img src="NUSSU.1.jpg" alt="NUSSU image 1" /></div>
+              <div class="gallery-item"><img src="NUSSU.2.jpg" alt="NUSSU image 2" /></div>
             </div>
-            <div class="leadership-gallery">
-              <div class="leadership-track">
-                <div class="leadership-img"><img src="AAYA.1.jpg" alt="AAYA image 1" onclick="openLightbox(this.src)" /></div>
-              </div>
+          </div>
+          <p class="gallery-hint">Swipe or scroll horizontally to view more photos.</p>
+        </article>
+
+        <article class="project-card">
+          <h3 class="project-title">NUSiCare - Finance Manager</h3>
+          <p class="project-description">
+            Organising fundraising events and securing sponsorships to support international students at the university. Managed event budgets, coordinated sponsor outreach, and helped raise funds for student welfare and community support programmes.
+          </p>
+
+          <div class="gallery-scroll">
+            <div class="gallery-track">
+              <div class="gallery-item"><img src="NUSICARE.1.jpg" alt="NUSiCare image 1" /></div>
+              <div class="gallery-item"><img src="NUSICARE.2.jpg" alt="NUSiCare image 2" /></div>
             </div>
-          </article>
-        </div>
+          </div>
+          <p class="gallery-hint">Swipe or scroll horizontally to view more photos.</p>
+        </article>
+
+        <article class="project-card">
+          <h3 class="project-title">Asia-Australia Youth Association - Careers Associate</h3>
+          <p class="project-description">
+            Conducted outreach with companies and HR/talent acquisition teams to create career opportunities for university students. Coordinated industry networking events, company office visits, and internship programmes to connect students with employers and strengthen university–industry engagement.
+          </p>
+
+          <div class="gallery-scroll">
+            <div class="gallery-track">
+              <div class="gallery-item"><img src="AAYA.1.jpg" alt="AAYA image 1" /></div>
+            </div>
+          </div>
+          <p class="gallery-hint">Swipe or scroll horizontally to view more photos.</p>
+        </article>
       </section>
     </main>
   </div>
-
-  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <span class="lightbox-close">&times;</span>
-    <img id="lightbox-img" src="" alt="Expanded image" />
-  </div>
-
-  <script>
-    function openLightbox(src) {
-      document.getElementById("lightbox-img").src = src;
-      document.getElementById("lightbox").classList.add("active");
-    }
-
-    function closeLightbox() {
-      document.getElementById("lightbox").classList.remove("active");
-    }
-
-    document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape") {
-        closeLightbox();
-      }
-    });
-  </script>
 </body>
 </html>
