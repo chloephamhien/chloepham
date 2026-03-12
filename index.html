@@ -21,6 +21,10 @@
       line-height: 1.6;
     }
 
+    a {
+      color: #000;
+    }
+
     .page {
       max-width: 1400px;
       margin: 0 auto;
@@ -37,7 +41,7 @@
       background: #ffffff;
       border: 1px solid #e5e7eb;
       border-radius: 28px;
-      padding: 32px 24px;
+      padding: 28px 22px;
       box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
       text-align: center;
     }
@@ -60,28 +64,30 @@
     }
 
     .sidebar h1 {
-      margin: 22px 0 10px;
-      font-size: 38px;
+      margin: 18px 0 6px;
+      font-size: 30px;
       line-height: 1.1;
-      color: #1d4ed8;
+      font-weight: 600;
+      color: #000;
     }
 
     .sidebar .role {
       margin: 0;
-      font-size: 18px;
-      color: #4b5563;
+      font-size: 16px;
+      color: #000;
     }
 
     .sidebar .summary {
-      margin: 16px auto 0;
+      margin: 14px auto 0;
       max-width: 250px;
       font-size: 14px;
       line-height: 1.7;
-      color: #6b7280;
+      color: #000;
+      word-break: break-word;
     }
 
     .sidebar .summary a {
-      color: #1d4ed8;
+      color: #000;
       text-decoration: none;
     }
 
@@ -90,7 +96,7 @@
     }
 
     .button-row {
-      margin-top: 24px;
+      margin-top: 20px;
       display: flex;
       justify-content: center;
       gap: 10px;
@@ -107,23 +113,37 @@
       transition: 0.2s ease;
     }
 
-    .btn-primary {
-      background: #1d4ed8;
-      color: #fff;
-    }
-
-    .btn-primary:hover {
-      opacity: 0.9;
-    }
-
     .btn-secondary {
       border: 1px solid #d1d5db;
-      color: #374151;
+      color: #000;
       background: #fff;
     }
 
     .btn-secondary:hover {
       background: #f9fafb;
+    }
+
+    .sidebar-nav {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid #e5e7eb;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-align: left;
+    }
+
+    .sidebar-nav a {
+      text-decoration: none;
+      font-size: 14px;
+      color: #000;
+      padding: 8px 10px;
+      border-radius: 10px;
+      transition: 0.15s;
+    }
+
+    .sidebar-nav a:hover {
+      background: #f3f4f6;
     }
 
     .content {
@@ -139,7 +159,7 @@
     }
 
     .section-card h2 {
-      margin-bottom: 16px;
+      margin: 0 0 16px;
       font-size: 26px;
       font-weight: 600;
       color: #000;
@@ -147,14 +167,17 @@
 
     .education p,
     .education li,
-    .project-description {
-      font-size: 16px;
-      line-height: 1.8;
-      color: #000000;
+    .project-description,
+    .section-card h5,
+    .section-card p,
+    .section-card li {
+      color: #000;
     }
 
     .education p {
       margin: 0 0 8px;
+      font-size: 15px;
+      line-height: 1.8;
     }
 
     .education ul {
@@ -162,14 +185,46 @@
       padding-left: 22px;
     }
 
- 
+    .education li {
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .project-block + .project-block {
+      margin-top: 28px;
+      padding-top: 28px;
+      border-top: 1px solid #ececec;
+    }
 
     .project-title {
-      margin-top: 20px;
+      margin: 0 0 8px;
       font-size: 20px;
       font-weight: 600;
       color: #000;
+      line-height: 1.35;
     }
+
+    .project-org {
+      margin: 0 0 8px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #000;
+    }
+
+    .project-link {
+      margin: 0 0 10px;
+      font-size: 14px;
+    }
+
+    .project-link a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    .project-link a:hover {
+      text-decoration: underline;
+    }
+
     .project-description {
       margin-top: 10px;
       font-size: 15px;
@@ -179,7 +234,7 @@
     }
 
     .file-viewer {
-      margin-top: 20px;
+      margin-top: 18px;
       border: 1px solid #e5e7eb;
       border-radius: 20px;
       overflow: hidden;
@@ -203,7 +258,6 @@
     }
 
     .file-viewer-header a {
-      color: #000000;
       text-decoration: none;
       font-size: 14px;
       font-weight: 600;
@@ -222,7 +276,7 @@
     }
 
     .gallery-scroll {
-      margin-top: 20px;
+      margin-top: 18px;
       overflow-x: auto;
       padding-bottom: 8px;
     }
@@ -250,7 +304,18 @@
       display: block;
     }
 
+    .gallery-single {
+      margin-top: 18px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .gallery-single .gallery-item {
+      width: min(380px, 100%);
+    }
+
     .gallery-hint {
+      margin: 10px 0 0;
       font-size: 12px;
       color: #555;
     }
@@ -260,11 +325,10 @@
         grid-template-columns: 1fr;
       }
 
-      .sidebar h1 {
-      margin: 18px 0 6px;
-      font-size: 30px;
-      font-weight: 600;
-      color: #000;
+      .sidebar {
+        position: static;
+        top: auto;
+      }
     }
 
     @media (max-width: 640px) {
@@ -280,41 +344,19 @@
       }
 
       .sidebar h1 {
-        font-size: 30px;
+        font-size: 26px;
       }
 
       .sidebar .role {
-        font-size: 16px;
-        color: #000;
+        font-size: 15px;
       }
-      .sidebar-nav {
-        margin-top: 26px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-      
-      .sidebar-nav a {
-        text-decoration: none;
-        font-size: 14px;
-        color: #000;
-        padding: 6px 10px;
-        border-radius: 8px;
-        transition: 0.15s;
-      }
-      .btn-primary {
-        background: #000;
-        color: #fff;
-      }
-      .sidebar-nav a:hover {
-        background: #f3f4f6;
-      }
+
       .section-card h2 {
-        font-size: 28px;
+        font-size: 24px;
       }
 
       .project-title {
-        font-size: 22px;
+        font-size: 18px;
       }
 
       .file-viewer iframe {
@@ -345,11 +387,12 @@
         Email:
         <a href="mailto:phamhienchloe@gmail.com">phamhienchloe@gmail.com</a>
       </p>
-      
+
       <div class="button-row">
         <a class="btn btn-secondary" href="https://www.linkedin.com/in/hienphamchloe/" target="_blank">LinkedIn</a>
         <a class="btn btn-secondary" href="Chloe_Pham_CV.pdf" target="_blank">CV</a>
       </div>
+
       <nav class="sidebar-nav">
         <a href="#education">Education</a>
         <a href="#data">Data Projects</a>
@@ -358,20 +401,22 @@
         <a href="#leadership">Leadership</a>
       </nav>
     </aside>
+
     <main class="content">
-      <section id="Education" class="section-card education">
+      <section id="education" class="section-card education">
         <h2>Education</h2>
         <p><strong>Bachelor of Commerce, University of Sydney, Australia</strong></p>
         <ul>
           <li>Majors: Finance &amp; Business Analytics (Double Majors)</li>
-          <li>Graduation Date: December 2027 </li>
+          <li>Graduation Date: December 2027</li>
           <li>WAM: Distinction</li>
         </ul>
       </section>
 
-      <section id="Data Analytics Projects" class="section-card">
+      <section id="data" class="section-card">
         <h2>Data Analytics Projects</h2>
 
+        <div class="project-block">
           <h3 class="project-title">Statistical Data Analysis Project – Relationship Satisfaction Study (Australia)</h3>
           <p class="project-description">
             This project analysed a national survey dataset (n=700) to investigate determinants of relationship satisfaction in Australia. Using statistical tools such as descriptive analysis, hypothesis testing, and regression modelling, the study explored how demographic and lifestyle variables (e.g., migration status, urban vs rural living, and relationship duration) relate to satisfaction. The aim was to identify key predictors of relationship satisfaction and provide data-driven insights.
@@ -384,13 +429,13 @@
             </div>
             <iframe src="Data_Analysis.pdf"></iframe>
           </div>
-        </article>
+        </div>
       </section>
 
-      <section id="Financial Projects" class="section-card">
+      <section id="finance" class="section-card">
         <h2>Financial Projects</h2>
 
-    
+        <div class="project-block">
           <h3 class="project-title">Equity Valuation Analysis</h3>
           <p class="project-description">
             This project involved conducting an equity research analysis of Super Retail Group Ltd. (ASX:SUL), an Australian retail company operating brands such as Supercheap Auto, Rebel, BCF, and Macpac. Using financial valuation tools including the Dividend Discount Model (DDM), Capital Asset Pricing Model (CAPM), sensitivity analysis, and comparable company multiples, the analysis evaluated the company’s intrinsic value based on publicly available financial data. The project aimed to assess the firm’s valuation and investment attractiveness and provide a data-supported investment recommendation for the stock.
@@ -403,9 +448,9 @@
             </div>
             <iframe src="Financial_Analysis.pdf"></iframe>
           </div>
-        </article>
+        </div>
 
-   
+        <div class="project-block">
           <h3 class="project-title">Strategic Analysis and Business Model Evaluation</h3>
           <p class="project-description">
             This project analysed the business strategy of Fair Trade Jewelry Co. to evaluate its competitive positioning and growth opportunities in the sustainable luxury market. Using strategic frameworks including the Strategy Diamond and Business Models, the analysis examined the firm’s value proposition, supply chain, customer segments, and ESG practices. The project aimed to assess how sustainability, innovation, and ethical sourcing contribute to the company’s competitive advantage and to develop strategic recommendations to support scalable growth while maintaining its social and environmental mission.
@@ -418,13 +463,13 @@
             </div>
             <iframe src="Consulting_Report.pdf"></iframe>
           </div>
-        </article>
+        </div>
       </section>
 
-      <section id="Case Study Competition" class="section-card">
+      <section id="case" class="section-card">
         <h2>Case Study Competition</h2>
 
-    
+        <div class="project-block">
           <h3 class="project-title">Strategic Consulting Analysis for MadeMealCo</h3>
           <p class="project-description">
             This project analysed the strategic challenges faced by MadeMealCo, focusing on high customer churn and supply chain costs in the meal-kit industry. Using market analysis and operational cost evaluation, the project proposed strategies such as loyalty programs, personalised menus, and supply chain optimisation to improve customer retention and profitability.
@@ -437,9 +482,9 @@
             </div>
             <iframe src="MadeMealCo.pdf"></iframe>
           </div>
-        </article>
+        </div>
 
-       
+        <div class="project-block">
           <h3 class="project-title">Integrated Marketing Campaign Strategy</h3>
           <p class="project-description">
             This project developed an integrated marketing strategy for NESCAFÉ Espresso Concentrate to reposition the brand among Gen Z consumers. Using market trend analysis, customer segmentation, and IMC planning, the project proposed digital campaigns, influencer collaborations, and experiential activations to embed the product into Gen Z’s productivity and social rituals.
@@ -452,9 +497,9 @@
             </div>
             <iframe src="NESTLE.pdf"></iframe>
           </div>
-        </article>
+        </div>
 
-
+        <div class="project-block">
           <h3 class="project-title">Market Strategy Analysis</h3>
           <p class="project-description">
             This project analysed the market adoption potential of InsightED, an AI-powered educational platform designed to support teachers working with neurodiverse learners. Using market analysis, competitor benchmarking, and pricing strategy evaluation, the project identified key market segments, adoption barriers, and pricing models to support large-scale implementation across schools and early childhood education centres.
@@ -467,16 +512,18 @@
             </div>
             <iframe src="TEAM 6 - PRESENTATION.pdf"></iframe>
           </div>
-        </article>
+        </div>
       </section>
 
-      <section id="Leadership Activities" class="section-card">
+      <section id="leadership" class="section-card">
         <h2>Leadership Activities</h2>
 
-        
+        <div class="project-block">
           <h3 class="project-title">AIESEC - Business Development Executive</h3>
-          <h5 International Association of Students in Economics and Business</h5>
-          <p> <a href="https://aiesec.org" target="_blank">(Organisation Page)</a></p>
+          <h5 class="project-org">International Association of Students in Economics and Business</h5>
+          <p class="project-link">
+            <a href="https://aiesec.org" target="_blank">Organisation Page</a>
+          </p>
           <p class="project-description">
             Delivering educational sessions to primary and secondary school students in Sydney on the United Nations Sustainable Development Goals (SDGs) and global citizenship principles. Also organised career panels and professional development workshops for university students to connect them with industry insights and leadership opportunities.
           </p>
@@ -493,9 +540,9 @@
             </div>
           </div>
           <p class="gallery-hint">Swipe or scroll horizontally to view more photos.</p>
-        </article>
+        </div>
 
-       
+        <div class="project-block">
           <h3 class="project-title">National University of Singapore Student Union - Public Relations</h3>
           <p class="project-description">
             Led outreach and public relations initiatives for the NUS Open Day, collaborating with the National University of Singapore to organise programmes and activities for prospective students. Managed stakeholder outreach, coordinated event programming, and supported the execution of an open day event that attracted 2,000+ visitors to the university.
@@ -509,9 +556,9 @@
             </div>
           </div>
           <p class="gallery-hint">Swipe or scroll horizontally to view more photos.</p>
-        </article>
+        </div>
 
-        
+        <div class="project-block">
           <h3 class="project-title">NUSiCare - Finance Manager</h3>
           <p class="project-description">
             Organising fundraising events and securing sponsorships to support international students at the university. Managed event budgets, coordinated sponsor outreach, and helped raise funds for student welfare and community support programmes.
@@ -525,27 +572,23 @@
             </div>
           </div>
           <p class="gallery-hint">Swipe or scroll horizontally to view more photos.</p>
-        </article>
+        </div>
 
-       
+        <div class="project-block">
           <h3 class="project-title">Asia-Australia Youth Association - Careers Associate</h3>
-          <p>
-            <a href="https://www.linkedin.com/company/asia-australia-youth-association/posts/?feedView=all" target="_blank">
-      Organisation Page
-            </a>
+          <p class="project-link">
+            <a href="https://www.linkedin.com/company/asia-australia-youth-association/posts/?feedView=all" target="_blank">Organisation Page</a>
           </p>
-          
           <p class="project-description">
             Conducted outreach with companies and HR/talent acquisition teams to create career opportunities for university students. Coordinated industry networking events, company office visits, and internship programmes to connect students with employers and strengthen university–industry engagement.
           </p>
 
-          <div class="gallery-scroll">
-            <div class="gallery-track">
-              <div class="gallery-item"><img src="AAYA.1.jpg" alt="AAYA image 1" /></div>
+          <div class="gallery-single">
+            <div class="gallery-item">
+              <img src="AAYA.1.jpg" alt="AAYA image 1" />
             </div>
           </div>
-          <p class="gallery-hint">Swipe or scroll horizontally to view more photos.</p>
-        </article>
+        </div>
       </section>
     </main>
   </div>
