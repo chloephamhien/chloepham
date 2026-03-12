@@ -16,8 +16,9 @@
     body {
       margin: 0;
       font-family: "Latin Modern Roman", "Computer Modern", serif;
-      background: #f7f8fa;
-      color: #000000;
+      background: #fafafa;
+      color: #000;
+      line-height: 1.6;
     }
 
     .page {
@@ -132,17 +133,16 @@
     .section-card {
       background: #fff;
       border: 1px solid #e5e7eb;
-      border-radius: 28px;
-      padding: 32px;
-      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
-      margin-bottom: 28px;
+      border-radius: 24px;
+      padding: 28px;
+      margin-bottom: 22px;
     }
 
     .section-card h2 {
-      margin: 0 0 22px;
-      font-size: 34px;
-      line-height: 1.15;
-      color: #111827;
+      margin-bottom: 16px;
+      font-size: 26px;
+      font-weight: 600;
+      color: #000;
     }
 
     .education p,
@@ -165,14 +165,17 @@
  
 
     .project-title {
-      margin: 0;
-      font-size: 28px;
-      line-height: 1.25;
-      color: #000000;
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: 600;
+      color: #000;
     }
-
     .project-description {
-      margin: 16px 0 0;
+      margin-top: 10px;
+      font-size: 15px;
+      line-height: 1.7;
+      color: #000;
+      max-width: 720px;
     }
 
     .file-viewer {
@@ -193,10 +196,10 @@
       flex-wrap: wrap;
     }
 
-    .file-viewer-header span {
-      font-size: 14px;
-      color: #000000;
-      font-weight: 600;
+    .file-viewer-header span,
+    .file-viewer-header a {
+      font-size: 13px;
+      color: #000;
     }
 
     .file-viewer-header a {
@@ -248,9 +251,8 @@
     }
 
     .gallery-hint {
-      margin: 12px 0 0;
-      font-size: 13px;
-      color: #6b7280;
+      font-size: 12px;
+      color: #555;
     }
 
     @media (max-width: 1024px) {
@@ -258,10 +260,11 @@
         grid-template-columns: 1fr;
       }
 
-      .sidebar {
-        position: relative;
-        top: 0;
-      }
+      .sidebar h1 {
+      margin: 18px 0 6px;
+      font-size: 30px;
+      font-weight: 600;
+      color: #000;
     }
 
     @media (max-width: 640px) {
@@ -280,6 +283,32 @@
         font-size: 30px;
       }
 
+      .sidebar .role {
+        font-size: 16px;
+        color: #000;
+      }
+      .sidebar-nav {
+        margin-top: 26px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      .sidebar-nav a {
+        text-decoration: none;
+        font-size: 14px;
+        color: #000;
+        padding: 6px 10px;
+        border-radius: 8px;
+        transition: 0.15s;
+      }
+      .btn-primary {
+        background: #000;
+        color: #fff;
+      }
+      .sidebar-nav a:hover {
+        background: #f3f4f6;
+      }
       .section-card h2 {
         font-size: 28px;
       }
@@ -321,9 +350,16 @@
         <a class="btn btn-secondary" href="https://www.linkedin.com/in/hienphamchloe/" target="_blank">LinkedIn</a>
         <a class="btn btn-secondary" href="Chloe_Pham_CV.pdf" target="_blank">CV</a>
       </div>
+      <nav class="sidebar-nav">
+        <a href="#education">Education</a>
+        <a href="#data">Data Projects</a>
+        <a href="#finance">Financial Projects</a>
+        <a href="#case">Case Competitions</a>
+        <a href="#leadership">Leadership</a>
+      </nav>
     </aside>
     <main class="content">
-      <section class="section-card education">
+      <section id="Education" class="section-card education">
         <h2>Education</h2>
         <p><strong>Bachelor of Commerce, University of Sydney, Australia</strong></p>
         <ul>
@@ -333,7 +369,7 @@
         </ul>
       </section>
 
-      <section class="section-card">
+      <section id="Data Analytics Projects" class="section-card">
         <h2>Data Analytics Projects</h2>
 
           <h3 class="project-title">Statistical Data Analysis Project – Relationship Satisfaction Study (Australia)</h3>
@@ -351,7 +387,7 @@
         </article>
       </section>
 
-      <section class="section-card">
+      <section id="Financial Projects" class="section-card">
         <h2>Financial Projects</h2>
 
     
@@ -385,7 +421,7 @@
         </article>
       </section>
 
-      <section class="section-card">
+      <section id="Case Study Competition" class="section-card">
         <h2>Case Study Competition</h2>
 
     
@@ -434,7 +470,7 @@
         </article>
       </section>
 
-      <section class="section-card">
+      <section id="Leadership Activities" class="section-card">
         <h2>Leadership Activities</h2>
 
         
