@@ -16,7 +16,7 @@
     body {
       margin: 0;
       font-family: "Latin Modern Roman", "Computer Modern", serif;
-      background: #fafafa;
+      background: #fcfafb;
       color: #000;
       line-height: 1.6;
     }
@@ -26,34 +26,34 @@
     }
 
     .page {
-      max-width: 1400px;
+      max-width: 1420px;
       margin: 0 auto;
-      padding: 40px 24px;
+      padding: 34px 22px;
       display: grid;
-      grid-template-columns: 320px minmax(0, 1fr);
-      gap: 32px;
+      grid-template-columns: 300px minmax(0, 1fr);
+      gap: 26px;
       align-items: start;
     }
 
     .sidebar {
       position: sticky;
-      top: 32px;
+      top: 24px;
       background: #ffffff;
-      border: 1px solid #e5e7eb;
+      border: 1px solid #f1d7e2;
       border-radius: 28px;
-      padding: 28px 22px;
-      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+      padding: 26px 20px;
+      box-shadow: 0 10px 30px rgba(156, 87, 118, 0.08);
       text-align: center;
     }
 
     .profile-image-wrap {
-      width: 160px;
-      height: 160px;
+      width: 156px;
+      height: 156px;
       margin: 0 auto;
       border-radius: 999px;
       overflow: hidden;
-      border: 1px solid #e5e7eb;
-      background: #f3f4f6;
+      border: 2px solid #f4dbe5;
+      background: #f8f4f6;
     }
 
     .profile-image-wrap img {
@@ -73,7 +73,7 @@
 
     .sidebar .role {
       margin: 0;
-      font-size: 16px;
+      font-size: 15px;
       color: #000;
     }
 
@@ -96,7 +96,7 @@
     }
 
     .button-row {
-      margin-top: 20px;
+      margin-top: 18px;
       display: flex;
       justify-content: center;
       gap: 10px;
@@ -106,44 +106,50 @@
     .btn {
       display: inline-block;
       padding: 10px 16px;
-      border-radius: 16px;
+      border-radius: 999px;
       text-decoration: none;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 600;
       transition: 0.2s ease;
-    }
-
-    .btn-secondary {
-      border: 1px solid #d1d5db;
+      border: 1px solid #ecc9d8;
       color: #000;
-      background: #fff;
+      background: #fff7fa;
     }
 
-    .btn-secondary:hover {
-      background: #f9fafb;
+    .btn:hover {
+      background: #fcecf2;
+      transform: translateY(-1px);
     }
 
     .sidebar-nav {
       margin-top: 24px;
       padding-top: 18px;
-      border-top: 1px solid #e5e7eb;
+      border-top: 1px solid #f3dce5;
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
       gap: 10px;
-      text-align: left;
+      justify-content: center;
     }
 
     .sidebar-nav a {
       text-decoration: none;
-      font-size: 14px;
+      font-size: 13px;
+      font-weight: 600;
       color: #000;
-      padding: 8px 10px;
-      border-radius: 10px;
-      transition: 0.15s;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: #fdeff4;
+      border: 1px solid #f1d3df;
+      transition: 0.18s ease;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .sidebar-nav a:hover {
-      background: #f3f4f6;
+      background: #f9dce8;
+      transform: translateY(-1px);
     }
 
     .content {
@@ -152,56 +158,63 @@
 
     .section-card {
       background: #fff;
-      border: 1px solid #e5e7eb;
-      border-radius: 24px;
+      border: 1px solid #f1d7e2;
+      border-radius: 26px;
       padding: 28px;
-      margin-bottom: 22px;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 24px rgba(156, 87, 118, 0.05);
     }
 
     .section-card h2 {
-      margin: 0 0 16px;
+      margin: 0 0 20px;
       font-size: 26px;
       font-weight: 600;
       color: #000;
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: #fdeaf1;
+      border: 1px solid #f3d2df;
     }
 
     .education p,
     .education li,
     .project-description,
-    .section-card h5,
     .section-card p,
-    .section-card li {
+    .section-card li,
+    .section-card h5 {
       color: #000;
     }
 
     .education p {
-      margin: 0 0 8px;
+      margin: 0 0 6px;
       font-size: 15px;
-      line-height: 1.8;
+      line-height: 1.75;
     }
 
     .education ul {
-      margin: 10px 0 0;
-      padding-left: 22px;
+      margin: 8px 0 0;
+      padding-left: 20px;
     }
 
     .education li {
+      margin-bottom: 3px;
       font-size: 15px;
-      line-height: 1.8;
+      line-height: 1.7;
     }
 
     .project-block + .project-block {
       margin-top: 28px;
       padding-top: 28px;
-      border-top: 1px solid #ececec;
+      border-top: 1px solid #f3e3ea;
     }
 
     .project-title {
-      margin: 0 0 8px;
+      margin: 0 0 6px;
       font-size: 20px;
+      line-height: 1.35;
       font-weight: 600;
       color: #000;
-      line-height: 1.35;
     }
 
     .project-org {
@@ -217,8 +230,9 @@
     }
 
     .project-link a {
-      color: #000;
+      color: #8f4f6f;
       text-decoration: none;
+      font-weight: 600;
     }
 
     .project-link a:hover {
@@ -226,24 +240,24 @@
     }
 
     .project-description {
-      margin-top: 10px;
+      margin: 4px 0 0;
       font-size: 15px;
       line-height: 1.7;
       color: #000;
-      max-width: 720px;
+      max-width: 860px;
     }
 
     .file-viewer {
-      margin-top: 18px;
-      border: 1px solid #e5e7eb;
+      margin-top: 16px;
+      border: 1px solid #f0d8e2;
       border-radius: 20px;
       overflow: hidden;
-      background: #f9fafb;
+      background: #fffafc;
     }
 
     .file-viewer-header {
       padding: 12px 16px;
-      border-bottom: 1px solid #e5e7eb;
+      border-bottom: 1px solid #f0d8e2;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -275,49 +289,63 @@
       background: #fff;
     }
 
+    .leadership-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .leadership-card {
+      border: 1px solid #f1d7e2;
+      border-radius: 22px;
+      padding: 22px;
+      background: #fffafc;
+      min-width: 0;
+    }
+
     .gallery-scroll {
-      margin-top: 18px;
+      margin-top: 16px;
       overflow-x: auto;
       padding-bottom: 8px;
     }
 
     .gallery-track {
       display: flex;
-      gap: 16px;
+      gap: 14px;
       width: max-content;
     }
 
     .gallery-item {
-      width: 340px;
-      border-radius: 20px;
+      width: 250px;
+      border-radius: 18px;
       overflow: hidden;
-      border: 1px solid #e5e7eb;
-      background: #f3f4f6;
+      border: 1px solid #efd7e1;
+      background: #f6eef2;
       flex-shrink: 0;
-      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+      box-shadow: 0 4px 12px rgba(156, 87, 118, 0.06);
     }
 
     .gallery-item img {
       width: 100%;
-      height: 270px;
+      height: 190px;
       object-fit: cover;
       display: block;
     }
 
     .gallery-single {
-      margin-top: 18px;
+      margin-top: 16px;
       display: flex;
       justify-content: center;
     }
 
     .gallery-single .gallery-item {
-      width: min(380px, 100%);
+      width: min(260px, 100%);
     }
 
     .gallery-hint {
       margin: 10px 0 0;
       font-size: 12px;
-      color: #555;
+      color: #6b5560;
     }
 
     @media (max-width: 1024px) {
@@ -327,19 +355,22 @@
 
       .sidebar {
         position: static;
-        top: auto;
+      }
+
+      .leadership-grid {
+        grid-template-columns: 1fr;
       }
     }
 
     @media (max-width: 640px) {
       .page {
-        padding: 20px 14px;
-        gap: 18px;
+        padding: 18px 12px;
+        gap: 16px;
       }
 
-      .section-card,
-      .sidebar {
-        padding: 22px 18px;
+      .sidebar,
+      .section-card {
+        padding: 20px 16px;
         border-radius: 22px;
       }
 
@@ -347,28 +378,33 @@
         font-size: 26px;
       }
 
-      .sidebar .role {
-        font-size: 15px;
-      }
-
       .section-card h2 {
-        font-size: 24px;
+        font-size: 22px;
       }
 
       .project-title {
         font-size: 18px;
       }
 
+      .sidebar-nav {
+        gap: 8px;
+      }
+
+      .sidebar-nav a {
+        font-size: 12px;
+        padding: 9px 12px;
+      }
+
       .file-viewer iframe {
-        height: 420px;
+        height: 400px;
       }
 
       .gallery-item {
-        width: 280px;
+        width: 220px;
       }
 
       .gallery-item img {
-        height: 220px;
+        height: 170px;
       }
     }
   </style>
@@ -389,8 +425,8 @@
       </p>
 
       <div class="button-row">
-        <a class="btn btn-secondary" href="https://www.linkedin.com/in/hienphamchloe/" target="_blank">LinkedIn</a>
-        <a class="btn btn-secondary" href="Chloe_Pham_CV.pdf" target="_blank">CV</a>
+        <a class="btn" href="https://www.linkedin.com/in/hienphamchloe/" target="_blank">LinkedIn</a>
+        <a class="btn" href="Chloe_Pham_CV.pdf" target="_blank">CV</a>
       </div>
 
       <nav class="sidebar-nav">
@@ -518,74 +554,76 @@
       <section id="leadership" class="section-card">
         <h2>Leadership Activities</h2>
 
-        <div class="project-block">
-          <h3 class="project-title">AIESEC - Business Development Executive</h3>
-          <h5 class="project-org">International Association of Students in Economics and Business</h5>
-          <p class="project-link">
-            <a href="https://aiesec.org" target="_blank">Organisation Page</a>
-          </p>
-          <p class="project-description">
-            Delivering educational sessions to primary and secondary school students in Sydney on the United Nations Sustainable Development Goals (SDGs) and global citizenship principles. Also organised career panels and professional development workshops for university students to connect them with industry insights and leadership opportunities.
-          </p>
+        <div class="leadership-grid">
+          <div class="leadership-card">
+            <h3 class="project-title">AIESEC - Business Development Executive</h3>
+            <h5 class="project-org">International Association of Students in Economics and Business</h5>
+            <p class="project-link">
+              <a href="https://aiesec.org" target="_blank">Organisation Page</a>
+            </p>
+            <p class="project-description">
+              Delivering educational sessions to primary and secondary school students in Sydney on the United Nations Sustainable Development Goals (SDGs) and global citizenship principles. Also organised career panels and professional development workshops for university students to connect them with industry insights and leadership opportunities.
+            </p>
 
-          <div class="gallery-scroll">
-            <div class="gallery-track">
-              <div class="gallery-item"><img src="AIESEC.3.jpg" alt="AIESEC image 1" /></div>
-              <div class="gallery-item"><img src="AIESEC.1.jpg" alt="AIESEC image 2" /></div>
-              <div class="gallery-item"><img src="AIESEC.5.jpg" alt="AIESEC image 3" /></div>
-              <div class="gallery-item"><img src="AIESEC.2.jpg" alt="AIESEC image 4" /></div>
-              <div class="gallery-item"><img src="AIESEC.4.jpg" alt="AIESEC image 5" /></div>
-              <div class="gallery-item"><img src="583904813_2058154521654443_1430909686623591883_n.jpg" alt="AIESEC image 6" /></div>
-              <div class="gallery-item"><img src="583210440_2058154514987777_4047070860218013213_n.jpg" alt="AIESEC image 7" /></div>
+            <div class="gallery-scroll">
+              <div class="gallery-track">
+                <div class="gallery-item"><img src="AIESEC.3.jpg" alt="AIESEC image 1" /></div>
+                <div class="gallery-item"><img src="AIESEC.1.jpg" alt="AIESEC image 2" /></div>
+                <div class="gallery-item"><img src="AIESEC.5.jpg" alt="AIESEC image 3" /></div>
+                <div class="gallery-item"><img src="AIESEC.2.jpg" alt="AIESEC image 4" /></div>
+                <div class="gallery-item"><img src="AIESEC.4.jpg" alt="AIESEC image 5" /></div>
+                <div class="gallery-item"><img src="583904813_2058154521654443_1430909686623591883_n.jpg" alt="AIESEC image 6" /></div>
+                <div class="gallery-item"><img src="583210440_2058154514987777_4047070860218013213_n.jpg" alt="AIESEC image 7" /></div>
+              </div>
             </div>
+            <p class="gallery-hint">Scroll horizontally to view more photos.</p>
           </div>
-          <p class="gallery-hint">Swipe or scroll horizontally to view more photos.</p>
-        </div>
 
-        <div class="project-block">
-          <h3 class="project-title">National University of Singapore Student Union - Public Relations</h3>
-          <p class="project-description">
-            Led outreach and public relations initiatives for the NUS Open Day, collaborating with the National University of Singapore to organise programmes and activities for prospective students. Managed stakeholder outreach, coordinated event programming, and supported the execution of an open day event that attracted 2,000+ visitors to the university.
-          </p>
+          <div class="leadership-card">
+            <h3 class="project-title">National University of Singapore Student Union - Public Relations</h3>
+            <p class="project-description">
+              Led outreach and public relations initiatives for the NUS Open Day, collaborating with the National University of Singapore to organise programmes and activities for prospective students. Managed stakeholder outreach, coordinated event programming, and supported the execution of an open day event that attracted 2,000+ visitors to the university.
+            </p>
 
-          <div class="gallery-scroll">
-            <div class="gallery-track">
-              <div class="gallery-item"><img src="NUSSU.1.jpg" alt="NUSSU image 1" /></div>
-              <div class="gallery-item"><img src="NUSSU.2.jpg" alt="NUSSU image 2" /></div>
-              <div class="gallery-item"><img src="NUSSU.3.png" alt="NUSSU image 3" /></div>
+            <div class="gallery-scroll">
+              <div class="gallery-track">
+                <div class="gallery-item"><img src="NUSSU.1.jpg" alt="NUSSU image 1" /></div>
+                <div class="gallery-item"><img src="NUSSU.2.jpg" alt="NUSSU image 2" /></div>
+                <div class="gallery-item"><img src="NUSSU.3.png" alt="NUSSU image 3" /></div>
+              </div>
             </div>
+            <p class="gallery-hint">Scroll horizontally to view more photos.</p>
           </div>
-          <p class="gallery-hint">Swipe or scroll horizontally to view more photos.</p>
-        </div>
 
-        <div class="project-block">
-          <h3 class="project-title">NUSiCare - Finance Manager</h3>
-          <p class="project-description">
-            Organising fundraising events and securing sponsorships to support international students at the university. Managed event budgets, coordinated sponsor outreach, and helped raise funds for student welfare and community support programmes.
-          </p>
+          <div class="leadership-card">
+            <h3 class="project-title">NUSiCare - Finance Manager</h3>
+            <p class="project-description">
+              Organising fundraising events and securing sponsorships to support international students at the university. Managed event budgets, coordinated sponsor outreach, and helped raise funds for student welfare and community support programmes.
+            </p>
 
-          <div class="gallery-scroll">
-            <div class="gallery-track">
-              <div class="gallery-item"><img src="NUSICARE.1.jpg" alt="NUSiCare image 1" /></div>
-              <div class="gallery-item"><img src="NUSICARE.2.jpg" alt="NUSiCare image 2" /></div>
-              <div class="gallery-item"><img src="NUSICARE.3.png" alt="NUSiCare image 3" /></div>
+            <div class="gallery-scroll">
+              <div class="gallery-track">
+                <div class="gallery-item"><img src="NUSICARE.1.jpg" alt="NUSiCare image 1" /></div>
+                <div class="gallery-item"><img src="NUSICARE.2.jpg" alt="NUSiCare image 2" /></div>
+                <div class="gallery-item"><img src="NUSICARE.3.png" alt="NUSiCare image 3" /></div>
+              </div>
             </div>
+            <p class="gallery-hint">Scroll horizontally to view more photos.</p>
           </div>
-          <p class="gallery-hint">Swipe or scroll horizontally to view more photos.</p>
-        </div>
 
-        <div class="project-block">
-          <h3 class="project-title">Asia-Australia Youth Association - Careers Associate</h3>
-          <p class="project-link">
-            <a href="https://www.linkedin.com/company/asia-australia-youth-association/posts/?feedView=all" target="_blank">Organisation Page</a>
-          </p>
-          <p class="project-description">
-            Conducted outreach with companies and HR/talent acquisition teams to create career opportunities for university students. Coordinated industry networking events, company office visits, and internship programmes to connect students with employers and strengthen university–industry engagement.
-          </p>
+          <div class="leadership-card">
+            <h3 class="project-title">Asia-Australia Youth Association - Careers Associate</h3>
+            <p class="project-link">
+              <a href="https://www.linkedin.com/company/asia-australia-youth-association/posts/?feedView=all" target="_blank">Organisation Page</a>
+            </p>
+            <p class="project-description">
+              Conducted outreach with companies and HR/talent acquisition teams to create career opportunities for university students. Coordinated industry networking events, company office visits, and internship programmes to connect students with employers and strengthen university–industry engagement.
+            </p>
 
-          <div class="gallery-single">
-            <div class="gallery-item">
-              <img src="AAYA.1.jpg" alt="AAYA image 1" />
+            <div class="gallery-single">
+              <div class="gallery-item">
+                <img src="AAYA.1.jpg" alt="AAYA image 1" />
+              </div>
             </div>
           </div>
         </div>
