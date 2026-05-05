@@ -451,7 +451,27 @@
 
       <section id="data" class="section-card">
         <h2>Data Analytics Projects</h2>
-
+        <div class="project-block">
+          <h3 class="project-title">Predictive Analytics – Netflix Customer Churn Prediction</h3>
+          <p class="project-description">
+            Developed and compared seven machine learning models to predict customer churn using a Kaggle dataset of 5,000 Netflix subscribers, with the goal of identifying high‑risk customers for targeted retention. 
+            Preprocessed data – removed non‑predictive columns (customer_id, monthly_fee), standardised numerical variables for linear models, one‑hot encoded categorical variables, and used stratified train/test split (70/30).
+            Tuned hyperparameters via 5‑fold cross‑validation and GridSearchCV, optimising for ROC‑AUC.
+            Evaluated models using accuracy, precision, recall, F1, ROC‑AUC, and confusion matrices. Gradient Boosting achieved the best performance: test ROC‑AUC = 0.9989, test accuracy = 0.9913, precision = 0.9947, recall = 0.9881.
+            Identified top churn predictors – feature importance analysis showed that average daily watch time (61.6% of predictive power), total watch hours, number of profiles, and days since last login were the strongest drivers.
+            Provided actionable recommendations – suggested Netflix should track behavioural disengagement signals (declining watch time, long inactivity) and implement tier‑specific retention strategies (Basic plan subscribers had highest churn rate at ~62%).
+            Built a reusable prediction pipeline – including preprocessing, model training, evaluation, and prediction for new customers.
+</p>
+          <div class="file-viewer">
+            <div class="file-viewer-header">
+              <span>Scrollable project file</span>
+              <a href="SA1_Report_Group_7.pdf" target="_blank">Open file</a>
+            </div>
+            <iframe src="SA1_Report_Group_7.pdf"></iframe>
+          </div>
+        </div>
+      </section>
+      
         <div class="project-block">
           <h3 class="project-title">Statistical Data Analysis Project – Relationship Satisfaction Study (Australia)</h3>
           <p class="project-description">
